@@ -1,28 +1,178 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RGB2HEX Converter</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB ↔ HEX Color Converter | Developer Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1>RGB ↔ HEX Converter</h1>
-    
-    <div class="converter">
-        <input type="text" id="colorInput" placeholder="Enter RGB (255,0,0) or HEX (#FF0000)">
-        <button id="convertBtn">Convert</button>
+    <div class="wrapper">
+        <!-- Header with subtle gradient -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-palette header-icon"></i>
+                <h1>RGB ↔ HEX Color Converter</h1>
+                <p class="subtitle">Convert between color formats instantly. Perfect for CSS, design & development.</p>
+            </div>
+        </header>
+
+        <!-- Main content card -->
+        <main class="card">
+            <!-- Input section -->
+            <section class="input-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-arrow-right-arrow-left"></i> Convert Colors</h2>
+                    <div class="format-tags">
+                        <span class="tag rgb-tag">RGB(255, 0, 0)</span>
+                        <span class="tag hex-tag">#FF0000</span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label for="colorInput" class="input-label">
+                            <i class="fas fa-tint"></i> Enter RGB or HEX
+                        </label>
+                        <input 
+                            type="text" 
+                            id="colorInput" 
+                            class="modern-input" 
+                            placeholder="e.g., 255, 0, 0 or #FF0000"
+                            autofocus
+                        >
+                        <div class="input-hint">
+                            <i class="fas fa-lightbulb"></i> Supports RGB values (0-255) and 6-digit HEX codes
+                        </div>
+                    </div>
+                    
+                    <button id="convertBtn" class="primary-btn">
+                        <i class="fas fa-sync-alt"></i> Convert
+                    </button>
+                </div>
+            </section>
+
+            <!-- Preview and result section -->
+            <section class="result-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-eye-dropper"></i> Result & Preview</h2>
+                    <div class="auto-detect">
+                        <i class="fas fa-magic"></i> Auto-detects input format
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-content">
+                        <div class="result-text">
+                            <p class="result-label">Converted Value:</p>
+                            <div class="result-value">
+                                <code id="result">Waiting for input...</code>
+                                <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="color-display">
+                            <p class="preview-label">Color Preview:</p>
+                            <div id="colorPreview" class="color-preview">
+                                <div class="preview-placeholder">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Color will appear here</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="color-info">
+                        <div class="info-item">
+                            <span class="info-label">Format:</span>
+                            <span id="formatType" class="info-value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span id="conversionStatus" class="info-value ready">Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Examples section -->
+            <section class="examples-section">
+                <h3><i class="fas fa-bolt"></i> Quick Examples</h3>
+                <div class="examples-grid">
+                    <button class="example-btn" data-color="0, 150, 255">
+                        <div class="example-color" style="background-color: rgb(0, 150, 255);"></div>
+                        <span>Ocean Blue</span>
+                        <code>rgb(0, 150, 255)</code>
+                    </button>
+                    <button class="example-btn" data-color="#FF6B6B">
+                        <div class="example-color" style="background-color: #FF6B6B;"></div>
+                        <span>Coral Red</span>
+                        <code>#FF6B6B</code>
+                    </button>
+                    <button class="example-btn" data-color="46, 204, 113">
+                        <div class="example-color" style="background-color: rgb(46, 204, 113);"></div>
+                        <span>Emerald Green</span>
+                        <code>rgb(46, 204, 113)</code>
+                    </button>
+                    <button class="example-btn" data-color="#9B59B6">
+                        <div class="example-color" style="background-color: #9B59B6;"></div>
+                        <span>Amethyst Purple</span>
+                        <code>#9B59B6</code>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                <i class="fas fa-code"></i> 
+                Made for developers & designers • 
+                <span id="conversionCount">0</span> colors converted
+            </p>
+            <p class="footer-note">
+                <i class="fas fa-exclamation-circle"></i> 
+                RGB values must be between 0-255. HEX values must be 6 characters (excluding #).
+            </p>
+        </footer>
     </div>
 
-    
-        <div class="result">
-    <p>Result: <span id="result"></span></p>
-    <div id="colorPreview"></div>
-    <button id="copyBtn">Copy Result</button>
-</div>
-
-
-<script src="converter.js"></script>
+    <!-- JavaScript -->
+    <script src="converter.js"></script>
+    <script>
+        // Example button functionality (add this to your converter.js too)
+        document.addEventListener('DOMContentLoaded', function() {
+            const exampleButtons = document.querySelectorAll('.example-btn');
+            const colorInput = document.getElementById('colorInput');
+            
+            exampleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const color = this.getAttribute('data-color');
+                    colorInput.value = color;
+                    colorInput.focus();
+                    
+                    // Trigger conversion if you have an auto-convert function
+                    // document.getElementById('convertBtn').click();
+                });
+            });
+            
+            // Track conversions
+            let conversionCount = 0;
+            const convertBtn = document.getElementById('convertBtn');
+            const countElement = document.getElementById('conversionCount');
+            
+            if(convertBtn) {
+                convertBtn.addEventListener('click', function() {
+                    conversionCount++;
+                    countElement.textContent = conversionCount;
+                });
+            }
+        });
+    </script>
 </body>
-</html>
+    </html>
