@@ -151,6 +151,16 @@ body {
     z-index: 1000;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.95);
+    /* Remove side margins and make background extend to edges */
+    margin: 0;
+    width: 100%;
+}
+
+.header .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
 }
 
 .header-content {
@@ -160,6 +170,7 @@ body {
     gap: var(--spacing-lg);
     flex-wrap: wrap;
 }
+
 
 .logo-container {
     display: flex;
@@ -295,14 +306,15 @@ body {
    ============================================ */
 .hero-section {
     background: var(--gradient-primary);
-    border-radius: var(--border-radius-lg);
+    border-radius: 0;
     padding: var(--spacing-xxl) var(--spacing-xl);
-    margin: var(--spacing-xl) 0;
+    margin: 0 0 var(--spacing-xl) 0;
     color: white;
     text-align: center;
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    width: 100%;
 }
 
 .hero-section::before {
