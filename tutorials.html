@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tutorials | Learn Web Design & Development | WebMas</title>
+    <meta name="description" content="Free color tutorials for web developers and designers. Learn RGB vs HEX, color theory, CSS colors, accessibility, and how to use our color tools effectively.">
+    <meta name="keywords" content="color tutorials, RGB tutorial, HEX tutorial, color theory, CSS colors, web design tutorials, color accessibility, color conversion tutorial">
+    <meta name="author" content="WebMas">
+    <link rel="canonical" href="https://rgbtohex.site/tutorials">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Color Tutorials | Learn Web Design & Development | WebMas">
+    <meta property="og:description" content="Free tutorials on color theory, conversion, and web design best practices.">
+    <meta property="og:url" content="https://rgbtohex.site/tutorials">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="webmasLogo.png">
+    <link rel="apple-touch-icon" href="webmasLogo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Color Tutorials",
+        "description": "Free tutorials about color theory and web design",
+        "url": "https://rgbtohex.site/tutorials",
+        "hasPart": [
+            {
+                "@type": "Article",
+                "name": "RGB vs HEX: Complete Guide",
+                "description": "Learn the differences between RGB and HEX color formats"
+            },
+            {
+                "@type": "Article",
+                "name": "Color Theory for Web Design",
+                "description": "Basic color theory principles for web developers"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="header-content">
+                <div class="logo-container">
+                    <a href="/">
+                        <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo" width="40" height="40">
+                        <div class="logo-text">
+                            <h1>WebMas Color Tools</h1>
+                            <p class="subtitle">Free tools for developers & designers</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="/">RGB to HEX</a></li>
+                        <li><a href="/hex-to-rgb">HEX to RGB</a></li>
+                        <li><a href="/color-tools">Color Tools</a></li>
+                        <li><a href="/tutorials" class="active">Tutorials</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><span aria-current="page">Tutorials</span></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Color Tutorials & Guides</h1>
+                        <p class="hero-description">Learn everything about colors in web development and design. From basics to advanced techniques.</p>
+                        <div class="feature-badges">
+                            <span class="badge"><i class="fas fa-graduation-cap"></i> Beginner Friendly</span>
+                            <span class="badge"><i class="fas fa-code"></i> Practical Examples</span>
+                            <span class="badge"><i class="fas fa-rocket"></i> Free Forever</span>
+                            <span class="badge"><i class="fas fa-clock"></i> 5-10 min read</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Tutorial -->
+                <article class="content-card featured-tutorial">
+                    <div class="featured-banner">
+                        <span class="featured-label"><i class="fas fa-star"></i> Featured Tutorial</span>
+                        <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                        <span class="time"><i class="fas fa-clock"></i> 8 min read</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-text">
+                            <h2><i class="fas fa-exchange-alt"></i> RGB vs HEX: The Complete Guide</h2>
+                            <p class="featured-excerpt">Understanding the differences between RGB and HEX color formats is essential for every web developer and designer. This comprehensive guide covers everything you need to know.</p>
+                            <div class="tutorial-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Written by WebMas Team</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Updated: Dec 2024</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>25,000+ reads</span>
+                                </div>
+                            </div>
+                            <a href="#rgb-vs-hex" class="primary-btn">
+                                <i class="fas fa-book-open"></i> Read Tutorial
+                            </a>
+                        </div>
+                        <div class="featured-image">
+                            <div class="color-comparison">
+                                <div class="color-format">
+                                    <div class="format-label">RGB</div>
+                                    <div class="format-example" style="background: linear-gradient(135deg, #ff6b6b, #4a6cf7, #10b981);">
+                                        <code>rgb(255, 107, 107)</code>
+                                    </div>
+                                </div>
+                                <div class="vs-label">VS</div>
+                                <div class="color-format">
+                                    <div class="format-label">HEX</div>
+                                    <div class="format-example" style="background: linear-gradient(135deg, #ff6b6b, #4a6cf7, #10b981);">
+                                        <code>#FF6B6B</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tutorial Categories -->
+                <section class="content-card">
+                    <h2><i class="fas fa-th-large"></i> Browse by Category</h2>
+                    <p class="section-description">Find tutorials based on your skill level and interests.</p>
+                    
+                    <div class="category-grid">
+                        <a href="#basics" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3>Basics</h3>
+                            <p>Start here if you're new to colors in web development</p>
+                            <span class="tutorial-count">5 tutorials</span>
+                        </a>
+                        
+                        <a href="#conversion" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h3>Conversion</h3>
+                            <p>Learn how to convert between color formats</p>
+                            <span class="tutorial-count">3 tutorials</span>
+                        </a>
+                        
+                        <a href="#css" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>CSS Colors</h3>
+                            <p>Master color implementation in CSS</p>
+                            <span class="tutorial-count">7 tutorials</span>
+                        </a>
+                        
+                        <a href="#design" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>Design Theory</h3>
+                            <p>Color theory and design principles</p>
+                            <span class="tutorial-count">4 tutorials</span>
+                        </a>
+                        
+                        <a href="#accessibility" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                            <h3>Accessibility</h3>
+                            <p>Make your colors accessible to everyone</p>
+                            <span class="tutorial-count">3 tutorials</span>
+                        </a>
+                        
+                        <a href="#tools" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Tool Guides</h3>
+                            <p>How to use WebMas color tools effectively</p>
+                            <span class="tutorial-count">6 tutorials</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- All Tutorials List -->
+                <section class="content-card">
+                    <h2><i class="fas fa-list"></i> All Tutorials</h2>
+                    <p class="section-description">Browse our complete collection of free tutorials. New tutorials added monthly.</p>
+                    
+                    <div class="tutorial-filters">
+                        <div class="filter-group">
+                            <label for="difficultyFilter"><i class="fas fa-chart-line"></i> Difficulty:</label>
+                            <select id="difficultyFilter">
+                                <option value="all">All Levels</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="categoryFilter"><i class="fas fa-tag"></i> Category:</label>
+                            <select id="categoryFilter">
+                                <option value="all">All Categories</option>
+                                <option value="basics">Basics</option>
+                                <option value="conversion">Conversion</option>
+                                <option value="css">CSS</option>
+                                <option value="design">Design</option>
+                                <option value="accessibility">Accessibility</option>
+                                <option value="tools">Tools</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sortFilter"><i class="fas fa-sort"></i> Sort by:</label>
+                            <select id="sortFilter">
+                                <option value="newest">Newest First</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="reading-time">Reading Time</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorials-list">
+                        <!-- RGB vs HEX Tutorial -->
+                        <article class="tutorial-card" id="rgb-vs-hex" data-difficulty="beginner" data-category="basics" data-popularity="high">
+                            <div class="tutorial-header">
+                                <div class="tutorial-meta">
+                                    <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                                    <span class="category basics">Basics</span>
+                                    <span class="reading-time"><i class="fas fa-clock"></i> 8 min</span>
+                                </div>
+                                <h3>RGB vs HEX: The Complete Guide</h3>
+                                <p class="tutorial-excerpt">Learn the fundamental differences between RGB and HEX color formats, when to use each, and how to convert between them effectively.</p>
+                            </div>
+                            <div class="tutorial-content">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li>How RGB color format works</li>
+                                    <li>How HEX color format works</li>
+                                    <li>When to use RGB vs HEX</li>
+                                    <li>Conversion methods and formulas</li>
+                                    <li>Practical examples and use cases</li>
+                                </ul>
+                                
+                                <div class="code-example">
+                                    <h5><i class="fas fa-code"></i> Example Conversion:</h5>
+                                    <pre><code>// RGB to HEX conversion
+rgb(255, 0, 0) → #FF0000
+
+// HEX to RGB conversion  
+#00FF00 → rgb(0, 255, 0)</code></pre>
+                                </div>
+                                
+                                <div class="tutorial-tips">
+                                    <h5><i class="fas fa-lightbulb"></i> Key Takeaways:</h5>
+                                    <div class="tips-grid">
+                                        <div class="tip">
+                                            <i class="fas fa-paint-brush"></i>
+                                            <p><strong>Design Software:</strong> Most design tools use RGB</p>
+                                        </div>
+                                        <div class="tip">
+                                            <i class="fas fa-code"></i>
+                                            <p><strong>Web Development:</strong> HEX is standard in CSS</p>
+                                        </div>
+                                        <div class="tip">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <p><strong>Performance:</strong> HEX is more compact in code</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a href="#" class="read-more-btn">
+                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Color Theory Tutorial -->
+                        <article class="tutorial-card" data-difficulty="beginner" data-category="design" data-popularity="medium">
+                            <div class="tutorial-header">
+                                <div class="tutorial-meta">
+                                    <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                                    <span class="category design">Design</span>
+                                    <span class="reading-time"><i class="fas fa-clock"></i> 10 min</span>
+                                </div>
+                                <h3>Color Theory for Web Designers</h3>
+                                <p class="tutorial-excerpt">Essential color theory principles every web designer should know. Learn about color wheels, harmonies, and psychology.</p>
+                            </div>
+                            <div class="tutorial-content">
+                                <h4>Topics Covered:</h4>
+                                <ul>
+                                    <li>Color wheel and relationships</li>
+                                    <li>Color harmonies (complementary, analogous, etc.)</li>
+                                    <li>Color psychology in web design</li>
+                                    <li>Creating effective color palettes</li>
+                                    <li>Tools for color scheme generation</li>
+                                </ul>
+                                <a href="#" class="read-more-btn">
+                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- CSS Colors Tutorial -->
+                        <article class="tutorial-card" data-difficulty="intermediate" data-category="css" data-popularity="high">
+                            <div class="tutorial-header">
+                                <div class="tutorial-meta">
+                                    <span class="difficulty intermediate"><i class="fas fa-chart-line"></i> Intermediate</span>
+                                    <span class="category css">CSS</span>
+                                    <span class="reading-time"><i class="fas fa-clock"></i> 12 min</span>
+                                </div>
+                                <h3>Complete Guide to CSS Colors</h3>
+                                <p class="tutorial-excerpt">Master all CSS color formats: HEX, RGB, HSL, and modern color spaces. Learn best practices and performance considerations.</p>
+                            </div>
+                            <div class="tutorial-content">
+                                <h4>CSS Color Formats Covered:</h4>
+                                <ul>
+                                    <li>HEX colors (#RRGGBB, #RGB)</li>
+                                    <li>RGB and RGBA colors</li>
+                                    <li>HSL and HSLA colors</li>
+                                    <li>Modern color spaces (Lab, LCH)</li>
+                                    <li>CSS custom properties with colors</li>
+                                </ul>
+                                <a href="#" class="read-more-btn">
+                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Color Accessibility Tutorial -->
+                        <article class="tutorial-card" data-difficulty="intermediate" data-category="accessibility" data-popularity="medium">
+                            <div class="tutorial-header">
+                                <div class="tutorial-meta">
+                                    <span class="difficulty intermediate"><i class="fas fa-chart-line"></i> Intermediate</span>
+                                    <span class="category accessibility">Accessibility</span>
+                                    <span class="reading-time"><i class="fas fa-clock"></i> 15 min</span>
+                                </div>
+                                <h3>Color Accessibility: WCAG Guidelines</h3>
+                                <p class="tutorial-excerpt">Learn how to make your website's colors accessible to everyone, including people with visual impairments and color blindness.</p>
+                            </div>
+                            <div class="tutorial-content">
+                                <h4>WCAG Requirements Covered:</h4>
+                                <ul>
+                                    <li>Contrast ratio requirements (AA, AAA)</li>
+                                    <li>Color blindness considerations</li>
+                                    <li>Tools for testing accessibility</li>
+                                    <li>Common pitfalls and solutions</li>
+                                    <li>Implementing accessible color schemes</li>
+                                </ul>
+                                <a href="#" class="read-more-btn">
+                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Using RGB to HEX Tool Tutorial -->
+                        <article class="tutorial-card" data-difficulty="beginner" data-category="tools" data-popularity="high">
+                            <div class="tutorial-header">
+                                <div class="tutorial-meta">
+                                    <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                                    <span class="category tools">Tools</span>
+                                    <span class="reading-time"><i class="fas fa-clock"></i> 6 min</span>
+                                </div>
+                                <h3>How to Use Our RGB to HEX Converter</h3>
+                                <p class="tutorial-excerpt">Step-by-step guide to using the WebMas RGB to HEX converter effectively. Learn all features and tips for maximum productivity.</p>
+                            </div>
+                            <div class="tutorial-content">
+                                <h4>Tool Features Covered:</h4>
+                                <ul>
+                                    <li>Basic conversion functionality</li>
+                                    <li>Using the color preview feature</li>
+                                    <li>Copy to clipboard options</li>
+                                    <li>Quick examples and presets</li>
+                                    <li>Mobile usage tips</li>
+                                </ul>
+                                <a href="/" class="primary-btn">
+                                    <i class="fas fa-external-link-alt"></i> Try the Tool Now
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Learning Path -->
+                <section class="content-card">
+                    <h2><i class="fas fa-road"></i> Recommended Learning Path</h2>
+                    <p class="section-description">Follow this path to systematically learn about colors in web development.</p>
+                    
+                    <div class="learning-path">
+                        <div class="path-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Foundation</h3>
+                                <p>Start with RGB vs HEX tutorial to understand basic color formats</p>
+                                <span class="step-duration">1 week</span>
+                            </div>
+                        </div>
+                        <div class="path-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>CSS Implementation</h3>
+                                <p>Learn all CSS color formats and how to use them effectively</p>
+                                <span class="step-duration">2 weeks</span>
+                            </div>
+                        </div>
+                        <div class="path-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Design Principles</h3>
+                                <p>Study color theory and design principles for web projects</p>
+                                <span class="step-duration">2 weeks</span>
+                            </div>
+                        </div>
+                        <div class="path-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Accessibility</h3>
+                                <p>Master color accessibility and WCAG compliance</p>
+                                <span class="step-duration">1 week</span>
+                            </div>
+                        </div>
+                        <div class="path-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Advanced Topics</h3>
+                                <p>Explore advanced color spaces, performance, and optimization</p>
+                                <span class="step-duration">3 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resources -->
+                <section class="content-card">
+                    <h2><i class="fas fa-book"></i> Additional Resources</h2>
+                    <p class="section-description">Books, courses, and tools to continue your learning journey.</p>
+                    
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Recommended Books</h3>
+                            <ul>
+                                <li>"Color Design Workbook" by Sean Adams</li>
+                                <li>"The Elements of Color" by Johannes Itten</li>
+                                <li>"Interaction of Color" by Josef Albers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Online Courses</h3>
+                            <ul>
+                                <li>Color Theory for Designers (Udemy)</li>
+                                <li>Web Accessibility (Coursera)</li>
+                                <li>Advanced CSS (Frontend Masters)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Useful Tools</h3>
+                            <ul>
+                                <li>Adobe Color (color scheme generator)</li>
+                                <li>WebAIM Contrast Checker</li>
+                                <li>Chrome DevTools Color Picker</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <h3>Blogs & Communities</h3>
+                            <ul>
+                                <li>CSS-Tricks Color Articles</li>
+                                <li>Smashing Magazine Design</li>
+                                <li>r/web_design on Reddit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="webmasLogo.png" alt="WebMas Logo" width="40" height="40">
+                            <h3>WebMas Color Tools</h3>
+                        </div>
+                        <p>Providing free, high-quality tools and tutorials for web developers and designers since 2017.</p>
+                        <div class="tutorial-stats">
+                            <p><i class="fas fa-graduation-cap"></i> <strong>25+ tutorials</strong> and growing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Tutorial Categories</h4>
+                        <ul>
+                            <li><a href="#basics">Basics</a></li>
+                            <li><a href="#conversion">Conversion</a></li>
+                            <li><a href="#css">CSS Colors</a></li>
+                            <li><a href="#design">Design Theory</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Learning Resources</h4>
+                        <ul>
+                            <li><a href="#learning-path">Learning Path</a></li>
+                            <li><a href="#resources">Additional Resources</a></li>
+                            <li><a href="/tools">Practice with Tools</a></li>
+                            <li><a href="/community">Community Forum</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="/contact">Ask a Question</a></li>
+                            <li><a href="/suggest-tutorial">Suggest Tutorial</a></li>
+                            <li><a href="/newsletter">Tutorial Updates</a></li>
+                            <li><a href="/contribute">Contribute</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2017-<span id="currentYear"></span> WebMas. All rights reserved.
+                    </p>
+                    <p class="educational-note">
+                        <i class="fas fa-heart"></i> Education should be free and accessible to everyone
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Tutorial filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const difficultyFilter = document.getElementById('difficultyFilter');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const sortFilter = document.getElementById('sortFilter');
+            const tutorialCards = document.querySelectorAll('.tutorial-card');
+            
+            function filterTutorials() {
+                const difficulty = difficultyFilter.value;
+                const category = categoryFilter.value;
+                const sortBy = sortFilter.value;
+                
+                let visibleCards = [];
+                
+                // Filter cards
+                tutorialCards.forEach(card => {
+                    const cardDifficulty = card.getAttribute('data-difficulty');
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    const showByDifficulty = difficulty === 'all' || cardDifficulty === difficulty;
+                    const showByCategory = category === 'all' || cardCategory === category;
+                    
+                    if (showByDifficulty && showByCategory) {
+                        card.style.display = 'block';
+                        visibleCards.push(card);
+                        
+                        // Add animation
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+                
+                // Sort cards
+                if (sortBy === 'popular') {
+                    visibleCards.sort((a, b) => {
+                        const aPop = a.getAttribute('data-popularity');
+                        const bPop = b.getAttribute('data-popularity');
+                        const popOrder = { high: 3, medium: 2, low: 1 };
+                        return popOrder[bPop] - popOrder[aPop];
+                    });
+                } else if (sortBy === 'reading-time') {
+                    visibleCards.sort((a, b) => {
+                        const aTime = parseInt(a.querySelector('.reading-time').textContent);
+                        const bTime = parseInt(b.querySelector('.reading-time').textContent);
+                        return aTime - bTime;
+                    });
+                }
+                
+                // Reorder in DOM
+                const container = document.querySelector('.tutorials-list');
+                visibleCards.forEach(card => {
+                    container.appendChild(card);
+                });
+            }
+            
+            // Add event listeners
+            difficultyFilter.addEventListener('change', filterTutorials);
+            categoryFilter.addEventListener('change', filterTutorials);
+            sortFilter.addEventListener('change', filterTutorials);
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add expand/collapse for tutorial cards
+            tutorialCards.forEach(card => {
+                const header = card.querySelector('.tutorial-header');
+                const content = card.querySelector('.tutorial-content');
+                
+                header.addEventListener('click', function() {
+                    const isExpanded = content.style.maxHeight;
+                    
+                    // Close all other tutorials
+                    tutorialCards.forEach(c => {
+                        const cContent = c.querySelector('.tutorial-content');
+                        if (cContent !== content) {
+                            cContent.style.maxHeight = null;
+                            c.classList.remove('expanded');
+                        }
+                    });
+                    
+                    // Toggle current
+                    if (isExpanded) {
+                        content.style.maxHeight = null;
+                        card.classList.remove('expanded');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        card.classList.add('expanded');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
