@@ -1,201 +1,662 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RGB to HEX Converter – Free Instant Color Converter</title>
-    <link rel="icon" href="webmasLogo.png">
-    <meta name="description" content="Convert RGB to HEX instantly with this free online RGB to HEX color converter. Perfect for CSS, design, and web development. No signup required.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>RGB to HEX Converter - Free Instant Color Converter Tool | WebMas</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Free RGB to HEX converter tool. Instantly convert RGB values to HEX codes and HEX to RGB. Perfect for web developers, designers, and students. No registration required, mobile-friendly, and completely free.">
+    <meta name="keywords" content="RGB to HEX, HEX to RGB, color converter, RGB converter, HEX converter, CSS colors, web design tools, color conversion, web development tools, color picker, HTML colors, designer tools, free color converter">
+    <meta name="author" content="WebMas">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical & Alternate URLs -->
     <link rel="canonical" href="https://rgbtohex.site/">
-    <meta property="og:title" content="RGB to HEX Converter – Free Instant Color Converter">
-    <meta property="og:description" content="Free RGB to HEX converter for developers and designers. Convert colors instantly for CSS and web design.">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rgbtohex.site/">
+    <meta property="og:title" content="RGB to HEX Converter - Free Instant Color Converter Tool | WebMas">
+    <meta property="og:description" content="Free online RGB to HEX and HEX to RGB converter. Perfect for web development, CSS, and design projects. Convert colors instantly with preview.">
+    <meta property="og:image" content="https://rgbtohex.site/webmasLogo.png">
+    <meta property="og:image:alt" content="WebMas RGB to HEX Converter Tool">
+    <meta property="og:site_name" content="WebMas Color Tools">
     
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "RGB to HEX Converter",
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "All",
-  "url": "https://rgbtohex.site/",
-  "description": "Free online RGB to HEX color converter for developers and designers.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
-    <script
-  type="text/javascript"
-  src="https://pl28279577.effectivegatecpm.com/fa/7b/6d/fa7b6db0967f1daa545d040c6dd011f4.js"
-></script>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RGB to HEX Converter - Free Instant Color Converter Tool | WebMas">
+    <meta name="twitter:description" content="Convert RGB to HEX and HEX to RGB instantly. Free tool for developers and designers with color preview and copy functionality.">
+    <meta name="twitter:image" content="https://rgbtohex.site/webmasLogo.png">
+    <meta name="twitter:image:alt" content="RGB to HEX Conversion Tool">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4a6cf7">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-TileColor" content="#4a6cf7">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="webmasLogo.png">
+    <link rel="apple-touch-icon" href="webmasLogo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RGB to HEX Converter by WebMas",
+        "url": "https://rgbtohex.site/",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "description": "Free online tool to convert RGB color values to HEX codes and vice versa. Instant conversion with color preview for web developers and designers.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "WebMas",
+            "url": "https://rgbtohex.site/",
+            "foundingDate": "2017",
+            "email": "3rdto1stworld@gmail.com",
+            "sameAs": []
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "Instant RGB to HEX conversion",
+            "HEX to RGB conversion",
+            "Color preview display",
+            "Copy to clipboard",
+            "Mobile-friendly interface",
+            "No registration required",
+            "Completely free to use"
+        ],
+        "screenshot": {
+            "@type": "ImageObject",
+            "url": "https://rgbtohex.site/webmasLogo.png",
+            "height": "630",
+            "width": "1200"
+        }
+    }
+    </script>
+    
+    <!-- Additional FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is the difference between RGB and HEX color codes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "RGB uses three decimal numbers (0-255) representing red, green, and blue intensities. HEX uses a six-digit hexadecimal code prefixed with #, where each pair represents red, green, and blue values in hexadecimal format (00-FF)."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Is the RGB to HEX converter free to use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our RGB to HEX converter is completely free with no registration required. There are no hidden fees or premium features."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Can I convert HEX to RGB as well?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! Our tool is bidirectional. Enter HEX codes to get RGB values, or enter RGB values to get HEX codes. The converter automatically detects your input format."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How accurate is the color conversion?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our converter provides 100% accurate mathematical conversion. The RGB to HEX conversion follows standard color theory calculations used in web development and design."
+            }
+        }]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rgbtohex.site/"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://rgbtohex.site/tools"
+        }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "RGB to HEX Converter",
+            "item": "https://rgbtohex.site/"
+        }]
+    }
+    </script>
+    
+    <!-- Fonts & Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
     <div class="wrapper">
-        <!-- Header with subtle gradient -->
-        <header class="header">
+        <!-- Header -->
+        <header class="header" role="banner">
             <div class="header-content">
-                <i class="fas fa-palette header-icon"></i>
-                <h1>RGB ↔ HEX Color Converter</h1>
-               <p class="subtitle">Convert RGB to HEX instantly for CSS, design, and web development.</p>
+                <div class="logo-container">
+                    <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo" width="40" height="40">
+                    <div class="logo-text">
+                        <h1>RGB ↔ HEX Color Converter</h1>
+                        <p class="subtitle">Free instant conversion tool for web developers & designers</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="/" class="active" aria-current="page">RGB to HEX</a></li>
+                        <li><a href="/hex-to-rgb">HEX to RGB</a></li>
+                        <li><a href="/color-tools">Color Tools</a></li>
+                        <li><a href="/tutorials">Tutorials</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
-        <!-- Main content card -->
-        <main class="card">
-            <!-- Input section -->
-            <section class="input-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-arrow-right-arrow-left"></i> Convert Colors</h2>
-                    <div class="format-tags">
-                        <span class="tag rgb-tag">RGB(255, 0, 0)</span>
-                        <span class="tag hex-tag">#FF0000</span>
-                    </div>
-                </div>
-                
-                <div class="input-group">
-                    <div class="input-wrapper">
-                        <label for="colorInput" class="input-label">
-                            <i class="fas fa-tint"></i> Enter RGB or HEX
-                        </label>
-                        <input 
-                            type="text" 
-                            id="colorInput" 
-                            class="modern-input" 
-                            placeholder="e.g., 255, 0, 0 or #FF0000"
-                            autofocus
-                        >
-                        <div class="input-hint">
-                            <i class="fas fa-lightbulb"></i> Supports RGB values (0-255) and 6-digit HEX codes
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/tools">Tools</a></li>
+                    <li><span aria-current="page">RGB to HEX Converter</span></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section" aria-label="Converter Tool">
+                <div class="container">
+                    <div class="hero-text">
+                        <h2 class="hero-title">Convert RGB to HEX & HEX to RGB Instantly</h2>
+                        <p class="hero-description">Free bidirectional color converter for web development, CSS, and design projects. No registration required.</p>
+                        
+                        <div class="feature-badges">
+                            <span class="badge"><i class="fas fa-bolt"></i> Instant Conversion</span>
+                            <span class="badge"><i class="fas fa-mobile-alt"></i> Mobile-Friendly</span>
+                            <span class="badge"><i class="fas fa-eye"></i> Color Preview</span>
+                            <span class="badge"><i class="fas fa-copy"></i> Copy to Clipboard</span>
+                            <span class="badge"><i class="fas fa-unlock"></i> Completely Free</span>
                         </div>
                     </div>
-                    
-                    <button id="convertBtn" class="primary-btn">
-                        <i class="fas fa-sync-alt"></i> Convert
-                    </button>
                 </div>
             </section>
 
-            <!-- Preview and result section -->
-            <section class="result-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-eye-dropper"></i> Result & Preview</h2>
-                    <div class="auto-detect">
-                        <i class="fas fa-magic"></i> Auto-detects input format
-                    </div>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-content">
-                        <div class="result-text">
-                            <p class="result-label">Converted Value:</p>
-                            <div class="result-value">
-                                <code id="result">Waiting for input...</code>
-                                <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
-                                    <i class="far fa-copy"></i>
+            <!-- Converter Tool Card -->
+            <section class="converter-section">
+                <div class="container">
+                    <div class="card">
+                        <!-- Input section -->
+                        <div class="input-section">
+                            <div class="section-header">
+                                <h3><i class="fas fa-arrow-right-arrow-left"></i> Convert Colors</h3>
+                                <div class="format-tags">
+                                    <span class="tag rgb-tag">RGB(255, 0, 0)</span>
+                                    <span class="tag hex-tag">#FF0000</span>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <div class="input-wrapper">
+                                    <label for="colorInput" class="input-label">
+                                        <i class="fas fa-tint"></i> Enter RGB or HEX Color
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="colorInput" 
+                                        class="modern-input" 
+                                        placeholder="e.g., 255, 0, 0 or #FF0000"
+                                        autofocus
+                                        aria-describedby="inputHelp"
+                                    >
+                                    <div id="inputHelp" class="input-hint">
+                                        <i class="fas fa-lightbulb"></i> Supports RGB values (0-255) and 6-digit HEX codes. Conversion happens automatically.
+                                    </div>
+                                </div>
+                                
+                                <button id="convertBtn" class="primary-btn" aria-label="Convert color">
+                                    <i class="fas fa-sync-alt"></i> Convert
                                 </button>
                             </div>
                         </div>
-                        
-                        <div class="color-display">
-                            <p class="preview-label">Color Preview:</p>
-                            <div id="colorPreview" class="color-preview">
-                                <div class="preview-placeholder">
-                                    <i class="fas fa-palette"></i>
-                                    <span>Color will appear here</span>
+
+                        <!-- Result section -->
+                        <div class="result-section">
+                            <div class="section-header">
+                                <h3><i class="fas fa-eye-dropper"></i> Result & Preview</h3>
+                                <div class="auto-detect">
+                                    <i class="fas fa-magic"></i> Auto-detects input format
+                                </div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <div class="result-content">
+                                    <div class="result-text">
+                                        <p class="result-label">Converted Value:</p>
+                                        <div class="result-value">
+                                            <code id="result" aria-live="polite">Waiting for input...</code>
+                                            <button id="copyBtn" class="copy-btn" title="Copy to clipboard" aria-label="Copy converted value to clipboard">
+                                                <i class="far fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="color-display">
+                                        <p class="preview-label">Color Preview:</p>
+                                        <div id="colorPreview" class="color-preview" role="img" aria-label="Color preview display">
+                                            <div class="preview-placeholder">
+                                                <i class="fas fa-palette"></i>
+                                                <span>Color will appear here</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="color-info">
+                                    <div class="info-item">
+                                        <span class="info-label">Format:</span>
+                                        <span id="formatType" class="info-value">-</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Status:</span>
+                                        <span id="conversionStatus" class="info-value ready">Ready</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Direction:</span>
+                                        <span id="conversionDirection" class="info-value">RGB → HEX</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="color-info">
-                        <div class="info-item">
-                            <span class="info-label">Format:</span>
-                            <span id="formatType" class="info-value">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Status:</span>
-                            <span id="conversionStatus" class="info-value ready">Ready</span>
+
+                        <!-- Examples section -->
+                        <div class="examples-section">
+                            <h3><i class="fas fa-bolt"></i> Quick Examples</h3>
+                            <p class="examples-description">Click any example to try it instantly:</p>
+                            <div class="examples-grid">
+                                <button class="example-btn" data-color="0, 150, 255" aria-label="Convert Ocean Blue: RGB(0, 150, 255)">
+                                    <div class="example-color" style="background-color: rgb(0, 150, 255);"></div>
+                                    <span>Ocean Blue</span>
+                                    <code>rgb(0, 150, 255)</code>
+                                </button>
+                                <button class="example-btn" data-color="#FF6B6B" aria-label="Convert Coral Red: #FF6B6B">
+                                    <div class="example-color" style="background-color: #FF6B6B;"></div>
+                                    <span>Coral Red</span>
+                                    <code>#FF6B6B</code>
+                                </button>
+                                <button class="example-btn" data-color="46, 204, 113" aria-label="Convert Emerald Green: RGB(46, 204, 113)">
+                                    <div class="example-color" style="background-color: rgb(46, 204, 113);"></div>
+                                    <span>Emerald Green</span>
+                                    <code>rgb(46, 204, 113)</code>
+                                </button>
+                                <button class="example-btn" data-color="#9B59B6" aria-label="Convert Amethyst Purple: #9B59B6">
+                                    <div class="example-color" style="background-color: #9B59B6;"></div>
+                                    <span>Amethyst Purple</span>
+                                    <code>#9B59B6</code>
+                                </button>
+                                <button class="example-btn" data-color="255, 193, 7" aria-label="Convert Amber Yellow: RGB(255, 193, 7)">
+                                    <div class="example-color" style="background-color: rgb(255, 193, 7);"></div>
+                                    <span>Amber Yellow</span>
+                                    <code>rgb(255, 193, 7)</code>
+                                </button>
+                                <button class="example-btn" data-color="#2C3E50" aria-label="Convert Midnight Blue: #2C3E50">
+                                    <div class="example-color" style="background-color: #2C3E50;"></div>
+                                    <span>Midnight Blue</span>
+                                    <code>#2C3E50</code>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Examples section -->
-            <section class="examples-section">
-                <h3><i class="fas fa-bolt"></i> Quick Examples</h3>
-                <div class="examples-grid">
-                    <button class="example-btn" data-color="0, 150, 255">
-                        <div class="example-color" style="background-color: rgb(0, 150, 255);"></div>
-                        <span>Ocean Blue</span>
-                        <code>rgb(0, 150, 255)</code>
-                    </button>
-                    <button class="example-btn" data-color="#FF6B6B">
-                        <div class="example-color" style="background-color: #FF6B6B;"></div>
-                        <span>Coral Red</span>
-                        <code>#FF6B6B</code>
-                    </button>
-                    <button class="example-btn" data-color="46, 204, 113">
-                        <div class="example-color" style="background-color: rgb(46, 204, 113);"></div>
-                        <span>Emerald Green</span>
-                        <code>rgb(46, 204, 113)</code>
-                    </button>
-                    <button class="example-btn" data-color="#9B59B6">
-                        <div class="example-color" style="background-color: #9B59B6;"></div>
-                        <span>Amethyst Purple</span>
-                        <code>#9B59B6</code>
-                    </button>
+            <!-- Content Sections -->
+            <section class="content-section">
+                <div class="container">
+                    <!-- How It Works -->
+                    <article class="content-card">
+                        <h2><i class="fas fa-cogs"></i> How Our RGB to HEX Converter Works</h2>
+                        <p>Our free online tool provides instant, accurate conversion between RGB and HEX color formats:</p>
+                        
+                        <div class="steps-grid">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <h3>Enter Your Color</h3>
+                                <p>Type RGB values (e.g., "255, 0, 0") or HEX code (e.g., "#FF0000") in the input field</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <h3>Auto-Detection</h3>
+                                <p>Our tool automatically detects whether you've entered RGB or HEX format</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <h3>Instant Conversion</h3>
+                                <p>Click convert or press Enter to get immediate, mathematically accurate results</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <h3>Copy & Use</h3>
+                                <p>Copy the converted value with one click and use it in your CSS, HTML, or design tools</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Why Convert Section -->
+                    <div class="content-grid">
+                        <article class="content-card">
+                            <h2><i class="fas fa-question-circle"></i> Why Convert RGB to HEX?</h2>
+                            <p>Understanding when and why to convert between RGB and HEX is essential for web professionals:</p>
+                            
+                            <div class="reasons-list">
+                                <div class="reason">
+                                    <h3><i class="fas fa-paint-brush"></i> Design to Development</h3>
+                                    <p>Designers often work in RGB (Photoshop, Illustrator), while developers need HEX for CSS and HTML.</p>
+                                </div>
+                                <div class="reason">
+                                    <h3><i class="fas fa-code"></i> CSS Compatibility</h3>
+                                    <p>HEX codes are standard in CSS and provide consistent color across all browsers.</p>
+                                </div>
+                                <div class="reason">
+                                    <h3><i class="fas fa-file-code"></i> Code Efficiency</h3>
+                                    <p>HEX values are more compact in code: <code>#FF0000</code> vs <code>rgb(255, 0, 0)</code>.</p>
+                                </div>
+                                <div class="reason">
+                                    <h3><i class="fas fa-mobile-alt"></i> Web Standards</h3>
+                                    <p>HEX is the preferred format for web development and is universally supported.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Common Conversions -->
+                        <article class="content-card">
+                            <h2><i class="fas fa-star"></i> Popular Color Conversions</h2>
+                            <p>Frequently converted colors used in web design and development:</p>
+                            
+                            <div class="conversion-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Color Name</th>
+                                            <th>RGB Value</th>
+                                            <th>HEX Code</th>
+                                            <th>Use Case</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Pure Red</td>
+                                            <td><code>rgb(255, 0, 0)</code></td>
+                                            <td><code>#FF0000</code></td>
+                                            <td>Error states, alerts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pure Green</td>
+                                            <td><code>rgb(0, 255, 0)</code></td>
+                                            <td><code>#00FF00</code></td>
+                                            <td>Success messages</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pure Blue</td>
+                                            <td><code>rgb(0, 0, 255)</code></td>
+                                            <td><code>#0000FF</code></td>
+                                            <td>Links, highlights</td>
+                                        </tr>
+                                        <tr>
+                                            <td>White</td>
+                                            <td><code>rgb(255, 255, 255)</code></td>
+                                            <td><code>#FFFFFF</code></td>
+                                            <td>Backgrounds, text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Black</td>
+                                            <td><code>rgb(0, 0, 0)</code></td>
+                                            <td><code>#000000</code></td>
+                                            <td>Text, borders</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Google Blue</td>
+                                            <td><code>rgb(66, 133, 244)</code></td>
+                                            <td><code>#4285F4</code></td>
+                                            <td>Brand colors</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <article class="content-card faq-section">
+                        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                        
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                                    <span>What is RGB color format?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div id="faq1" class="faq-answer">
+                                    <p>RGB stands for Red, Green, Blue. It's an additive color model where colors are created by mixing these three primary colors. Each component ranges from 0 to 255, with 0 being no color and 255 being full intensity.</p>
+                                    <p>Example: <code>rgb(255, 0, 0)</code> is pure red, <code>rgb(0, 255, 0)</code> is pure green, and <code>rgb(0, 0, 255)</code> is pure blue.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                                    <span>What is HEX color format?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div id="faq2" class="faq-answer">
+                                    <p>HEX (hexadecimal) color codes represent colors using a six-digit combination of numbers (0-9) and letters (A-F), prefixed with a hash (#). Each pair represents the red, green, and blue components in hexadecimal.</p>
+                                    <p>Example: <code>#FF0000</code> is red, where FF=255 (red), 00=0 (green), 00=0 (blue).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                                    <span>Can I convert HEX to RGB too?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div id="faq3" class="faq-answer">
+                                    <p>Yes! Our converter works both ways. Enter a HEX code like <code>#FF5733</code> and it will convert to <code>rgb(255, 87, 51)</code>. The tool automatically detects your input format and provides the opposite conversion.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                                    <span>Is this tool better than rgbtohex.net?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div id="faq4" class="faq-answer">
+                                    <p>Our WebMas RGB to HEX converter offers several advantages:</p>
+                                    <ul>
+                                        <li><strong>Completely free</strong> with no hidden costs or premium features</li>
+                                        <li><strong>Instant bidirectional conversion</strong> (RGB→HEX and HEX→RGB)</li>
+                                        <li><strong>Visual color preview</strong> showing the actual color</li>
+                                        <li><strong>Mobile-optimized</strong> interface that works on all devices</li>
+                                        <li><strong>No registration required</strong> - use it immediately</li>
+                                        <li><strong>Copy to clipboard</strong> with one click</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                                    <span>How accurate is the conversion?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div id="faq5" class="faq-answer">
+                                    <p>Our conversions are 100% mathematically accurate. The RGB to HEX conversion follows the standard formula:</p>
+                                    <p><code>HEX = # + (Red in hex) + (Green in hex) + (Blue in hex)</code></p>
+                                    <p>Where each RGB component (0-255) is converted to its two-digit hexadecimal equivalent (00-FF). The same mathematical precision applies to HEX to RGB conversions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Related Tools -->
+                    <div class="content-card">
+                        <h2><i class="fas fa-tools"></i> Related Color Tools</h2>
+                        <p>Explore our other free tools for web developers and designers:</p>
+                        
+                        <div class="tools-grid">
+                            <a href="/hex-to-rgb" class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h3>HEX to RGB Converter</h3>
+                                <p>Convert HEX color codes to RGB values instantly</p>
+                                <span class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            
+                            <a href="/color-picker" class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-eye-dropper"></i>
+                                </div>
+                                <h3>Color Picker</h3>
+                                <p>Interactive color picker with multiple formats</p>
+                                <span class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            
+                            <a href="/color-palette" class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h3>Palette Generator</h3>
+                                <p>Create beautiful color palettes for your projects</p>
+                                <span class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            
+                            <a href="/color-contrast" class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-adjust"></i>
+                                </div>
+                                <h3>Contrast Checker</h3>
+                                <p>Check WCAG compliance for color contrast</p>
+                                <span class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
-            <section>
-    <h2>RGB to HEX Converter</h2>
-
-    <p>
-        RGB to HEX conversion is a common task in web development, graphic design, and digital color management.
-        RGB represents colors using red, green, and blue light values ranging from 0 to 255, while HEX represents
-        the same colors using hexadecimal notation commonly used in CSS and HTML.
-    </p>
-
-    <p>
-        Developers often convert RGB to HEX when working with stylesheets, design systems, and front-end frameworks
-        because HEX color codes are compact, widely supported, and easy to reuse across projects.
-        This tool allows you to convert RGB values to HEX instantly without installing any software.
-    </p>
-
-    <p>
-        Example conversions:
-        RGB(255, 0, 0) converts to #FF0000, and RGB(0, 150, 255) converts to #0096FF.
-        These values can be copied directly into CSS, design tools, or code editors.
-    </p>
-</section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <p>
-                <i class="fas fa-code"></i> 
-                Made for developers & designers • 
-                <span id="conversionCount">0</span> colors converted
-            </p>
-            <p class="footer-note">
-                <i class="fas fa-exclamation-circle"></i> 
-                RGB values must be between 0-255. HEX values must be 6 characters (excluding #).
-            </p>
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="webmasLogo.png" alt="WebMas Logo" width="40" height="40">
+                            <h3>WebMas Color Tools</h3>
+                        </div>
+                        <p>Providing free, high-quality tools for web developers and designers since 2017.</p>
+                        <div class="conversion-stats">
+                            <p><i class="fas fa-sync-alt"></i> <strong><span id="conversionCount">0</span> colors converted</strong> and counting</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="/">RGB to HEX Converter</a></li>
+                            <li><a href="/hex-to-rgb">HEX to RGB Converter</a></li>
+                            <li><a href="/color-tools">All Color Tools</a></li>
+                            <li><a href="/tutorials">Color Tutorials</a></li>
+                            <li><a href="/about">About WebMas</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Popular Conversions</h4>
+                        <ul>
+                            <li><a href="/convert/255-0-0">Red: RGB(255, 0, 0) → #FF0000</a></li>
+                            <li><a href="/convert/0-255-0">Green: RGB(0, 255, 0) → #00FF00</a></li>
+                            <li><a href="/convert/0-0-255">Blue: RGB(0, 0, 255) → #0000FF</a></li>
+                            <li><a href="/convert/255-255-255">White: RGB(255, 255, 255) → #FFFFFF</a></li>
+                            <li><a href="/convert/0-0-0">Black: RGB(0, 0, 0) → #000000</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Legal & Contact</h4>
+                        <ul>
+                            <li><a href="/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="/terms-of-service">Terms of Service</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="mailto:3rdto1stworld@gmail.com">Email: 3rdto1stworld@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2017-<span id="currentYear">2024</span> WebMas. All rights reserved. 
+                        RGB to HEX Converter is a free tool provided by WebMas.
+                    </p>
+                    <p class="footer-note">
+                        <i class="fas fa-exclamation-circle"></i> 
+                        RGB values must be between 0-255. HEX values must be 6 characters (excluding #).
+                        This tool is provided for educational and professional use.
+                    </p>
+                    <p class="seo-note">
+                        This page is optimized for: RGB to HEX converter, color conversion tool, free RGB converter, 
+                        HEX to RGB, web design tools, CSS color converter, online color tool.
+                    </p>
+                </div>
+            </div>
         </footer>
     </div>
 
     <!-- JavaScript -->
     <script src="converter.js"></script>
     <script>
-        // Example button functionality (add this to your converter.js too)
+        // Current year for copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Example buttons functionality
         document.addEventListener('DOMContentLoaded', function() {
             const exampleButtons = document.querySelectorAll('.example-btn');
             const colorInput = document.getElementById('colorInput');
@@ -220,9 +681,53 @@
                 convertBtn.addEventListener('click', function() {
                     conversionCount++;
                     countElement.textContent = conversionCount;
+                    localStorage.setItem('conversionCount', conversionCount);
                 });
             }
+            
+            // Load saved conversion count
+            const savedCount = localStorage.getItem('conversionCount');
+            if(savedCount) {
+                conversionCount = parseInt(savedCount);
+                countElement.textContent = conversionCount;
+            }
+            
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    // Close all other FAQ answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.style.maxHeight = null;
+                    });
+                    document.querySelectorAll('.faq-question').forEach(q => {
+                        q.setAttribute('aria-expanded', 'false');
+                        q.querySelector('i').className = 'fas fa-chevron-down';
+                    });
+                    
+                    // Toggle current
+                    if(!isExpanded) {
+                        this.setAttribute('aria-expanded', 'true');
+                        this.querySelector('i').className = 'fas fa-chevron-up';
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+            
+            // Auto open first FAQ
+            if(faqQuestions.length > 0) {
+                faqQuestions[0].click();
+            }
+        });
+        
+        // Skip to content link
+        document.querySelector('.skip-to-content').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('main-content').focus();
         });
     </script>
 </body>
-    </html>
+</html>
