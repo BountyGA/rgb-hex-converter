@@ -2,23 +2,42 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <title>About WebMas | Free Color Tools for Developers & Designers</title>
+    
+    <!-- Primary Meta Tags -->
     <meta name="description" content="Learn about WebMas - providing free, high-quality color conversion tools for web developers and designers since 2017. Our mission to make color conversion easy and accessible.">
     <meta name="keywords" content="about WebMas, color tools about, RGB to HEX about, WebMas mission, free developer tools, designer tools">
     <meta name="author" content="WebMas">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical & Alternate URLs -->
     <link rel="canonical" href="https://rgbtohex.site/about">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="About WebMas | Free Color Tools for Developers & Designers">
-    <meta property="og:description" content="Learn about WebMas and our mission to provide free color tools.">
-    <meta property="og:url" content="https://rgbtohex.site/about">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rgbtohex.site/about">
+    <meta property="og:title" content="About WebMas | Free Color Tools for Developers & Designers">
+    <meta property="og:description" content="Learn about WebMas and our mission to provide free, high-quality color conversion tools for developers and designers.">
+    <meta property="og:image" content="https://rgbtohex.site/webmasLogo.png">
+    <meta property="og:image:alt" content="WebMas Color Tools Logo">
+    <meta property="og:site_name" content="WebMas Color Tools">
     
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About WebMas | Free Color Tools for Developers & Designers">
+    <meta name="twitter:description" content="Learn about WebMas and our mission to provide free color tools for developers and designers since 2017.">
+    <meta name="twitter:image" content="https://rgbtohex.site/webmasLogo.png">
+    <meta name="twitter:image:alt" content="WebMas Color Tools">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4a6cf7">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-TileColor" content="#4a6cf7">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="webmasLogo.png">
@@ -47,185 +66,989 @@
         }
     }
     </script>
+    
+    <!-- Adsterra Script -->
+    <script type="text/javascript" src="https://pl28279577.effectivegatecpm.com/fa/7b/6d/fa7b6db0967f1daa545d040c6dd011f4.js"></script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles (from index.html) -->
+    <style>
+        :root {
+            --primary: #4a6cf7;
+            --primary-dark: #3a5ce5;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --dark-bg: #1a1d23;
+            --card-bg: #ffffff;
+            --body-bg: #fdfdfd; 
+            --border-color: #d1d9ff;
+            --text-primary: #212529;
+            --text-secondary: #4a5568;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+            --shadow: 0 5px 15px rgba(74, 108, 247, 0.1);
+            --shadow-lg: 0 10px 30px rgba(74, 108, 247, 0.15);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            color: var(--text-primary);
+            background-color: var(--body-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 9999;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+            transition: top 0.3s ease;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        /* Desktop: sticky header */
+        @media (min-width: 768px) {
+            .header {
+                position: sticky;
+                top: 0;
+            }
+        }
+        
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--dark);
+        }
+        
+        .logo-text .subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #4a6cf7 0%, #3a5ce5 100%);
+            color: white;
+            padding: 6rem 0 8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: none;
+            border: 1px solid var(--border-color);
+        }
+        
+        .content-card h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(74, 108, 247, 0.1);
+        }
+        
+        /* About Sections */
+        .about-section {
+            margin-bottom: 3rem;
+        }
+        
+        .about-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 30px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: -90px;
+            top: 0;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .value-card {
+            background: #fdfdfd;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .value-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Tools List */
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .tool-item {
+            background: #fdfdfd;
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .tool-item:hover {
+            border-color: var(--primary);
+            background: rgba(74, 108, 247, 0.02);
+        }
+        
+        .tool-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, rgba(74, 108, 247, 0.1) 0%, rgba(74, 108, 247, 0.05) 100%);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-code);
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        /* Contact Options */
+        .contact-options {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .primary-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .primary-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+            color: white;
+        }
+        
+        .secondary-btn {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .secondary-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+        }
+        
+        /* About Actions */
+        .about-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(74, 108, 247, 0.1);
+            flex-wrap: wrap;
+        }
+        
+        .contact-note {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .footer h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+        
+        /* Smooth scroll target */
+        .scroll-target {
+            scroll-margin-top: 100px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .values-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-year {
+                position: relative;
+                left: 0;
+                top: 0;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+            
+            .timeline {
+                padding-left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 20px;
+            }
+            
+            .timeline-item::before {
+                left: -26px;
+            }
+            
+            .about-actions,
+            .contact-options {
+                flex-direction: column;
+            }
+            
+            .primary-btn,
+            .secondary-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 2.5rem 0;
+            }
+        }
+        
+        /* Mobile Header Styles */
+        @media (max-width: 767.98px) {
+            .header {
+                position: relative;
+            }
+            
+            .header.fixed-hidden {
+                opacity: 0;
+                transform: translateY(-100%);
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+        }
+        
+        .fixed-mobile-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1050;
+        }
+        
+        .fixed-mobile-header.visible {
+            transform: translateY(0);
+        }
+        
+        /* Logo animations */
+        .logo-wrapper {
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-wrapper:hover {
+            transform: rotate(15deg);
+        }
+        
+        .logo-wrapper .badge {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.7; }
+        }
+        
+        /* Navigation styles */
+        .nav-pills .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-pills .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .nav-pills .nav-link:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .nav-pills .nav-link.active {
+            background: linear-gradient(135deg, #4a6cf7 0%, #6a11cb 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+        }
+        
+        .nav-pills .nav-link .badge {
+            font-size: 0.5em;
+            padding: 0.2em 0.4em;
+            animation: bounce 1s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-3px); }
+        }
+        
+        /* Mobile-specific styles */
+        @media (max-width: 767.98px) {
+            .logo-text h1 {
+                font-size: 1.25rem;
+            }
+            
+            .subtitle {
+                font-size: 0.75rem;
+            }
+            
+            .container.py-3 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            #mobileNav .card-body {
+                padding: 0.75rem;
+            }
+            
+            #mobileNav .btn {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip to main content -->
+    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
-    <div class="wrapper">
-        <!-- Header -->
-        <header class="header" role="banner">
-            <div class="header-content">
-                <div class="logo-container">
-                    <a href="/">
-                        <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo" width="40" height="40">
-                        <div class="logo-text">
-                            <h1>WebMas Color Tools</h1>
-                            <p class="subtitle">Free tools for developers & designers</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <!-- Logo Container -->
+                <div class="logo-container mb-3 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <!-- Logo with background and animation -->
+                        <div class="logo-wrapper position-relative me-3">
+                            <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo rounded-circle shadow-sm" width="50" height="50">
+                            <!-- Animated color dots around logo -->
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger p-1" style="font-size: 6px;"></span>
+                            <span class="position-absolute top-100 start-0 translate-middle badge rounded-circle bg-success p-1" style="font-size: 6px;"></span>
+                            <span class="position-absolute top-100 start-100 translate-middle badge rounded-circle bg-primary p-1" style="font-size: 6px;"></span>
                         </div>
-                    </a>
+                        
+                        <!-- Logo Text -->
+                        <div class="logo-text">
+                            <h1 class="h3 fw-bold mb-0 text-primary">
+                                <span class="d-block d-md-inline">WebMas</span>
+                                <span class="d-block d-md-inline ms-md-2">Color Tools</span>
+                            </h1>
+                            <p class="subtitle text-muted mb-0 small d-none d-md-block">
+                                Free tools for web developers & designers
+                            </p>
+                            <p class="subtitle text-muted mb-0 small d-md-none">
+                                Free color tools
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Navigation -->
-                <nav class="main-nav" aria-label="Main Navigation">
-                    <ul>
-                        <li><a href="/">RGB to HEX</a></li>
-                        <li><a href="/hex-to-rgb">HEX to RGB</a></li>
-                        <li><a href="/color-tools">Color Tools</a></li>
-                        <li><a href="/tutorials">Tutorials</a></li>
-                        <li><a href="/about" class="active">About</a></li>
-                    </ul>
+                <!-- Desktop Navigation -->
+                <nav class="main-nav d-none d-md-block" aria-label="Main Navigation">
+                    <div class="nav nav-pills bg-light rounded-pill p-1">
+                        <!-- RGB to HEX Link -->
+                        <a class="nav-link rounded-pill" href="/">
+                            <i class="bi bi-arrow-left-right me-1"></i>
+                            <span>RGB to HEX</span>
+                        </a>
+                        
+                        <!-- HEX to RGB Link -->
+                        <a class="nav-link rounded-pill" href="/hex-to-rgb">
+                            <i class="bi bi-arrow-right-left me-1"></i>
+                            <span>HEX to RGB</span>
+                        </a>
+                        
+                        <!-- Color Tools Link with dropdown -->
+                        <div class="nav-item dropdown">
+                            <a class="nav-link rounded-pill dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-tools me-1"></i>
+                                <span>Tools</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/color-picker"><i class="bi bi-eyedropper me-2"></i>Color Picker</a></li>
+                                <li><a class="dropdown-item" href="/color-palette"><i class="bi bi-palette me-2"></i>Palette Generator</a></li>
+                                <li><a class="dropdown-item" href="/color-contrast"><i class="bi bi-contrast me-2"></i>Contrast Checker</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/color-tools"><i class="bi bi-grid-3x3-gap me-2"></i>All Tools</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Tutorials Link -->
+                        <a class="nav-link rounded-pill" href="/tutorials">
+                            <i class="bi bi-book me-1"></i>
+                            <span>Tutorials</span>
+                        </a>
+                        
+                        <!-- About Link with badge -->
+                        <a class="nav-link active rounded-pill position-relative" href="#about-content" aria-current="page">
+                            <i class="bi bi-info-circle me-1"></i>
+                            <span>About</span>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6em;">
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </a>
+                    </div>
                 </nav>
+                
+                <!-- Mobile Menu Toggle Button -->
+                <button class="btn btn-primary rounded-pill d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav">
+                    <i class="bi bi-list me-2"></i>Menu
+                </button>
             </div>
-        </header>
-
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="container">
-                <ol>
-                    <li><a href="/">Home</a></li>
-                    <li><span aria-current="page">About</span></li>
-                </ol>
+            
+            <!-- Mobile Navigation (Collapsible) -->
+            <div class="collapse mt-3 d-md-none" id="mobileNav">
+                <div class="card card-body shadow-sm">
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" href="/">
+                            <i class="bi bi-arrow-left-right me-2"></i>RGB to HEX
+                        </a>
+                        <a class="btn btn-outline-primary" href="/hex-to-rgb">
+                            <i class="bi bi-arrow-right-left me-2"></i>HEX to RGB
+                        </a>
+                        <a class="btn btn-outline-primary" href="/color-tools">
+                            <i class="bi bi-tools me-2"></i>Color Tools
+                        </a>
+                        <a class="btn btn-outline-primary" href="/tutorials">
+                            <i class="bi bi-book me-2"></i>Tutorials
+                        </a>
+                        <a class="btn btn-primary" href="#about-content">
+                            <i class="bi bi-info-circle me-2"></i>About
+                        </a>
+                    </div>
+                </div>
             </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main id="main-content" class="main-content">
+        </div>
+        
+        <!-- Quick Stats Bar -->
+        <div class="bg-primary bg-opacity-10 py-2 border-top border-bottom d-none d-md-block">
             <div class="container">
-                <!-- Hero Section -->
-                <section class="hero-section">
-                    <div class="hero-text">
+                <div class="row g-2 text-center">
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-people-fill text-primary me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">100K+</div>
+                                <div class="text-muted small">Users</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-arrow-repeat text-success me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">5M+</div>
+                                <div class="text-muted small">Conversions</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-globe text-info me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">150+</div>
+                                <div class="text-muted small">Countries</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-shield-check text-warning me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">Free</div>
+                                <div class="text-muted small">Always Free</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Stats (Compact) -->
+        <div class="bg-primary bg-opacity-10 py-1 d-md-none">
+            <div class="container">
+                <div class="row g-1 text-center small">
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-people-fill text-primary mb-1"></i>
+                            <div class="fw-bold">100K+</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Users</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-arrow-repeat text-success mb-1"></i>
+                            <div class="fw-bold">5M+</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Converts</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-globe text-info mb-1"></i>
+                            <div class="fw-bold">150+</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Countries</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-shield-check text-warning mb-1"></i>
+                            <div class="fw-bold">Free</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Always</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Fixed Mobile Header (appears on scroll) -->
+    <div class="fixed-mobile-header d-md-none">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo (Mini) -->
+                <div class="d-flex align-items-center">
+                    <img src="webmasLogo.png" alt="WebMas Logo" class="rounded-circle me-2" width="32" height="32">
+                    <span class="fw-bold text-primary">About WebMas</span>
+                </div>
+                
+                <!-- Menu Button -->
+                <button class="btn btn-primary btn-sm rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavFixed" aria-expanded="false" aria-controls="mobileNavFixed">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation for Fixed Header -->
+            <div class="collapse mt-2" id="mobileNavFixed">
+                <div class="card card-body shadow-sm">
+                    <div class="d-grid gap-1">
+                        <a class="btn btn-outline-primary btn-sm" href="/">
+                            <i class="bi bi-arrow-left-right me-2"></i>RGB to HEX
+                        </a>
+                        <a class="btn btn-outline-primary btn-sm" href="/hex-to-rgb">
+                            <i class="bi bi-arrow-right-left me-2"></i>HEX to RGB
+                        </a>
+                        <a class="btn btn-outline-primary btn-sm" href="/color-tools">
+                            <i class="bi bi-tools me-2"></i>Color Tools
+                        </a>
+                        <a class="btn btn-primary btn-sm" href="#about-content">
+                            <i class="bi bi-info-circle me-2"></i>About
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb py-2 bg-white" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About WebMas</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10">
                         <h1 class="hero-title">About WebMas Color Tools</h1>
                         <p class="hero-description">Providing free, high-quality color conversion tools for web developers and designers since 2017.</p>
                     </div>
-                </section>
+                </div>
+            </div>
+        </section>
 
+        <!-- Content Sections -->
+        <section id="about-content" class="content-section scroll-target">
+            <div class="container">
+                <!-- Main About Content -->
                 <article class="content-card">
+                    <!-- Our Mission -->
                     <section class="about-section">
-                        <h2><i class="fas fa-rocket"></i> Our Mission</h2>
-                        <p>At WebMas, we believe that powerful tools should be accessible to everyone. Our mission is to provide free, reliable, and easy-to-use color conversion tools that help developers and designers work more efficiently.</p>
-                        <p>We understand the frustration of searching for simple solutions to common problems. That's why we've dedicated ourselves to creating tools that "just work" - no signups, no fees, no complications.</p>
+                        <h2><i class="bi bi-rocket-takeoff me-2"></i> Our Mission</h2>
+                        <p>At WebMas, we believe that powerful tools should be accessible to everyone. Our mission is to provide affordable, reliable, and easy-to-use tools that help developers and designers work more efficiently.</p>
+                        <p>We understand the frustration of searching for simple solutions to common problems. That's why we've dedicated ourselves to creating tools that "just work" - no signups, no fees, no complications. Every tool we build is designed with user experience as the top priority.</p>
                     </section>
                     
+                    <!-- Our Story -->
                     <section class="about-section">
-                        <h2><i class="fas fa-history"></i> Our Story</h2>
-                        <p>WebMas was founded in 2017 by developers who were tired of the limitations of existing color conversion tools. We started with a simple RGB to HEX converter and have since expanded to include a full suite of color tools.</p>
+                        <h2><i class="bi bi-clock-history me-2"></i> Our Story</h2>
+                        <p>WebMas was founded in 2017 by a developer who wanted less limitations. We started with a simple projects mostly locally, and have since expanded to start including full suite of tools.</p>
+                        
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-year">2017</div>
                                 <div class="timeline-content">
                                     <h3>Foundation</h3>
-                                    <p>Launched our first RGB to HEX converter with basic functionality</p>
+                                    <p>Launched our first RGB to HEX converter with basic functionality. Focused on providing instant, accurate conversions with a clean interface.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-year">2018</div>
                                 <div class="timeline-content">
                                     <h3>Expansion</h3>
-                                    <p>Added HEX to RGB conversion and improved user interface</p>
+                                    <p>Added HEX to RGB conversion and improved user interface. Introduced color preview and copy-to-clipboard functionality.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-year">2019</div>
                                 <div class="timeline-content">
                                     <h3>Mobile Optimization</h3>
-                                    <p>Redesigned all tools for mobile-first experience</p>
+                                    <p>Redesigned all tools for mobile-first experience. Implemented responsive design that works perfectly on all devices.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-year">2020</div>
                                 <div class="timeline-content">
                                     <h3>Tool Suite</h3>
-                                    <p>Launched additional color tools including color picker and palette generator</p>
+                                    <p>Launched additional color tools including color picker and palette generator. Expanded our focus from conversion to comprehensive color tools.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-year">2021-Present</div>
                                 <div class="timeline-content">
                                     <h3>Continuous Improvement</h3>
-                                    <p>Regular updates, new features, and performance optimizations</p>
+                                    <p>Regular updates, new features, and performance optimizations. Focused on accessibility, speed, and user experience enhancements.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
                     
+                    <!-- Our Values -->
                     <section class="about-section">
-                        <h2><i class="fas fa-bullseye"></i> Our Values</h2>
+                        <h2><i class="bi bi-bullseye me-2"></i> Our Values</h2>
                         <div class="values-grid">
                             <div class="value-card">
                                 <div class="value-icon">
-                                    <i class="fas fa-unlock"></i>
+                                    <i class="bi bi-unlock"></i>
                                 </div>
                                 <h3>Free & Accessible</h3>
-                                <p>All our tools are completely free with no hidden costs or premium features.</p>
+                                <p>All our tools are completely free with no hidden costs, premium features, or registration requirements.</p>
                             </div>
                             <div class="value-card">
                                 <div class="value-icon">
-                                    <i class="fas fa-bolt"></i>
+                                    <i class="bi bi-lightning-charge"></i>
                                 </div>
                                 <h3>Fast & Efficient</h3>
-                                <p>We optimize for speed and performance, ensuring instant conversions.</p>
+                                <p>We optimize for speed and performance, ensuring instant conversions and minimal loading times.</p>
                             </div>
                             <div class="value-card">
                                 <div class="value-icon">
-                                    <i class="fas fa-mobile-alt"></i>
+                                    <i class="bi bi-phone"></i>
                                 </div>
                                 <h3>Mobile-First</h3>
-                                <p>All tools work perfectly on desktop, tablet, and mobile devices.</p>
+                                <p>All tools work perfectly on desktop, tablet, and mobile devices with responsive, touch-friendly interfaces.</p>
                             </div>
                             <div class="value-card">
                                 <div class="value-icon">
-                                    <i class="fas fa-shield-alt"></i>
+                                    <i class="bi bi-shield-check"></i>
                                 </div>
                                 <h3>Privacy-Focused</h3>
-                                <p>We don't collect personal data. Your privacy is our priority.</p>
+                                <p>We don't collect personal data. Your conversions are processed locally when possible, and your privacy is our priority.</p>
                             </div>
                             <div class="value-card">
                                 <div class="value-icon">
-                                    <i class="fas fa-code"></i>
+                                    <i class="bi bi-code-slash"></i>
                                 </div>
                                 <h3>Developer-Friendly</h3>
-                                <p>Built by developers for developers, with clean interfaces and accurate results.</p>
+                                <p>Built by developers for developers, with clean interfaces, accurate results, and API-ready outputs.</p>
                             </div>
                             <div class="value-card">
                                 <div class="value-icon">
-                                    <i class="fas fa-heart"></i>
+                                    <i class="bi bi-heart"></i>
                                 </div>
                                 <h3>Community-Driven</h3>
-                                <p>We listen to user feedback and continuously improve based on your needs.</p>
+                                <p>We listen to user feedback and continuously improve based on your needs and suggestions.</p>
                             </div>
                         </div>
                     </section>
                     
+                    <!-- Our Tools -->
                     <section class="about-section">
-                        <h2><i class="fas fa-tools"></i> Our Tools</h2>
-                        <p>Currently, we offer the following free tools:</p>
+                        <h2><i class="bi bi-tools me-2"></i> Our Tools</h2>
+                        <p>Currently, we offer the following free tools designed to make your workflow more efficient:</p>
+                        
                         <div class="tools-list">
                             <div class="tool-item">
-                                <h3><i class="fas fa-exchange-alt"></i> RGB to HEX Converter</h3>
-                                <p>Convert RGB color values to HEX codes instantly with color preview.</p>
+                                <h3><i class="bi bi-arrow-left-right me-2 text-primary"></i> RGB to HEX Converter</h3>
+                                <p>Convert RGB color values to HEX codes instantly with real-time color preview and one-click copy functionality. Perfect for converting design colors to web formats.</p>
                             </div>
                             <div class="tool-item">
-                                <h3><i class="fas fa-exchange-alt"></i> HEX to RGB Converter</h3>
-                                <p>Convert HEX color codes to RGB values with mathematical accuracy.</p>
+                                <h3><i class="bi bi-arrow-right-left me-2 text-primary"></i> HEX to RGB Converter</h3>
+                                <p>Convert HEX color codes to RGB values with mathematical accuracy. Supports 3-digit and 6-digit HEX codes with or without the # prefix.</p>
                             </div>
                             <div class="tool-item">
-                                <h3><i class="fas fa-eye-dropper"></i> Color Picker (Coming Soon)</h3>
-                                <p>Interactive color picker with multiple color format support.</p>
+                                <h3><i class="bi bi-eyedropper me-2 text-primary"></i> Color Picker (Coming Soon)</h3>
+                                <p>Interactive color picker with multiple color format support. Visual color selection with real-time conversion between formats.</p>
                             </div>
                             <div class="tool-item">
-                                <h3><i class="fas fa-palette"></i> Color Palette Generator (Coming Soon)</h3>
-                                <p>Generate beautiful color palettes for your design projects.</p>
+                                <h3><i class="bi bi-palette me-2 text-primary"></i> Color Palette Generator (Coming Soon)</h3>
+                                <p>Generate beautiful color palettes for your design projects. Create harmonious color schemes based on color theory principles.</p>
                             </div>
                             <div class="tool-item">
-                                <h3><i class="fas fa-adjust"></i> Color Contrast Checker (Coming Soon)</h3>
-                                <p>Check WCAG compliance for color contrast ratios.</p>
+                                <h3><i class="bi bi-contrast me-2 text-primary"></i> Color Contrast Checker (Coming Soon)</h3>
+                                <p>Check WCAG compliance for color contrast ratios. Ensure your designs are accessible to all users.</p>
                             </div>
                         </div>
                     </section>
                     
+                    <!-- Our Impact -->
                     <section class="about-section">
-                        <h2><i class="fas fa-chart-line"></i> Our Impact</h2>
+                        <h2><i class="bi bi-graph-up me-2"></i> Our Impact</h2>
+                        <p>Since our launch in 2017, we've helped thousands of developers and designers work more efficiently:</p>
+                        
                         <div class="stats-grid">
                             <div class="stat-card">
                                 <div class="stat-number" id="usersCount">100,000+</div>
@@ -244,96 +1067,205 @@
                                 <div class="stat-label">Uptime</div>
                             </div>
                         </div>
+                        
+                        <p class="mt-4">We're proud to serve developers and designers from startups to Fortune 500 companies, educational institutions, and individual creators around the world.</p>
                     </section>
                     
+                    <!-- Get In Touch -->
                     <section class="about-section">
-                        <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
-                        <p>We'd love to hear from you! Whether you have feedback, suggestions, or just want to say hello:</p>
+                        <h2><i class="bi bi-envelope me-2"></i> Get In Touch</h2>
+                        <p>We'd love to hear from you! Whether you have feedback, suggestions, feature requests, or just want to say hello:</p>
+                        
                         <div class="contact-options">
-                            <a href="/contact" class="primary-btn"><i class="fas fa-comment"></i> Contact Us</a>
-                            <a href="mailto:3rdto1stworld@gmail.com" class="secondary-btn"><i class="fas fa-envelope"></i> Email Us</a>
+                            <a href="/contact" class="primary-btn">
+                                <i class="bi bi-chat-left-text"></i> Contact Form
+                            </a>
+                            <a href="mailto:3rdto1stworld@gmail.com" class="secondary-btn">
+                                <i class="bi bi-envelope"></i> Email Us
+                            </a>
                         </div>
-                        <p class="contact-note">We typically respond within 24-48 hours.</p>
+                        
+                        <p class="contact-note">We typically respond within 24-48 hours. Your feedback helps us improve our tools for everyone.</p>
                     </section>
                     
+                    <!-- Call to Action -->
                     <div class="about-actions">
-                        <a href="/" class="primary-btn"><i class="fas fa-home"></i> Back to Home</a>
-                        <a href="/color-tools" class="secondary-btn"><i class="fas fa-tools"></i> Explore All Tools</a>
+                        <a href="/" class="primary-btn">
+                            <i class="bi bi-house"></i> Back to Home
+                        </a>
+                        <a href="/color-tools" class="secondary-btn">
+                            <i class="bi bi-tools"></i> Explore All Tools
+                        </a>
                     </div>
                 </article>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer" role="contentinfo">
-            <div class="container">
-                <div class="footer-content">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-section">
-                        <div class="footer-logo">
-                            <img src="webmasLogo.png" alt="WebMas Logo" width="40" height="40">
-                            <h3>WebMas Color Tools</h3>
+                        <div class="footer-logo mb-3">
+                            <img src="webmasLogo.png" alt="WebMas Logo" width="40" height="40" class="me-2">
+                            <h3 class="h5 mb-0">WebMas Color Tools</h3>
                         </div>
-                        <p>Providing free, high-quality tools for web developers and designers since 2017.</p>
+                        <p class="mb-3">Providing free, high-quality color conversion tools for web developers and designers since 2017.</p>
+                        <div class="conversion-stats">
+                            <p class="mb-0"><i class="bi bi-arrow-repeat me-2"></i> <strong><span id="totalConversions">5M+</span> colors converted</strong> and counting</p>
+                        </div>
                     </div>
-                    
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-section">
-                        <h4>About</h4>
-                        <ul>
-                            <li><a href="/about" class="active">Our Story</a></li>
-                            <li><a href="/mission">Mission & Values</a></li>
-                            <li><a href="/team">Our Team</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Tools</h4>
-                        <ul>
-                            <li><a href="/">RGB to HEX Converter</a></li>
-                            <li><a href="/hex-to-rgb">HEX to RGB Converter</a></li>
-                            <li><a href="/color-tools">All Tools</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/newsletter">Newsletter</a></li>
+                        <h4 class="h5 mb-3">About</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#about-content">Our Story</a></li>
+                            <li class="mb-2"><a href="#about-content">Mission & Values</a></li>
+                            <li class="mb-2"><a href="#about-content">Our Tools</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="footer-bottom">
-                    <p class="copyright">
-                        © 2017-<span id="currentYear"></span> WebMas. All rights reserved.
-                    </p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="h5 mb-3">Tools</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="/">RGB to HEX Converter</a></li>
+                            <li class="mb-2"><a href="/hex-to-rgb">HEX to RGB Converter</a></li>
+                            <li class="mb-2"><a href="/color-tools">All Color Tools</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="h5 mb-3">Connect</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="/contact">Contact Us</a></li>
+                            <li class="mb-2"><a href="/tutorials">Tutorials</a></li>
+                            <li class="mb-2"><a href="mailto:3rdto1stworld@gmail.com">Email Support</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright mb-2">
+                    © 2017-<span id="currentYear">2024</span> WebMas. All rights reserved.
+                    All tools are provided free of charge for educational and professional use.
+                </p>
+                <p class="seo-note mb-0 small">
+                    WebMas provides free RGB to HEX, HEX to RGB, and other color conversion tools for web developers and designers.
+                </p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript -->
     <script>
         // Set current year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
         // Animate stats
-        function animateCounter(elementId, finalValue, duration = 2000) {
+        function animateCounter(elementId, finalValue, suffix = '+', duration = 2000) {
             const element = document.getElementById(elementId);
             if (!element) return;
             
             let start = 0;
-            const increment = finalValue / (duration / 16); // 60fps
+            const increment = finalValue / (duration / 16);
             
             const timer = setInterval(() => {
                 start += increment;
                 if (start >= finalValue) {
-                    element.textContent = finalValue + '+';
+                    element.textContent = finalValue.toLocaleString() + suffix;
                     clearInterval(timer);
                 } else {
-                    element.textContent = Math.floor(start).toLocaleString() + '+';
+                    element.textContent = Math.floor(start).toLocaleString() + suffix;
                 }
             }, 16);
+        }
+        
+        // Mobile fixed header functionality
+        let lastScrollTop = 0;
+        const fixedMobileHeader = document.querySelector('.fixed-mobile-header');
+        const mainHeader = document.querySelector('.header');
+        
+        if (fixedMobileHeader && window.innerWidth < 768) {
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 150) {
+                    fixedMobileHeader.classList.add('visible');
+                    
+                    if (scrollTop > lastScrollTop) {
+                        mainHeader.classList.add('fixed-hidden');
+                    } else {
+                        mainHeader.classList.remove('fixed-hidden');
+                    }
+                } else {
+                    fixedMobileHeader.classList.remove('visible');
+                    mainHeader.classList.remove('fixed-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        let offset = 0;
+                        if (window.innerWidth < 768 && fixedMobileHeader.classList.contains('visible')) {
+                            offset = fixedMobileHeader.offsetHeight;
+                        }
+                        
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menus if open
+                        const mobileNav = document.getElementById('mobileNav');
+                        const mobileNavFixed = document.getElementById('mobileNavFixed');
+                        
+                        if (mobileNav && mobileNav.classList.contains('show')) {
+                            new bootstrap.Collapse(mobileNav).hide();
+                        }
+                        
+                        if (mobileNavFixed && mobileNavFixed.classList.contains('show')) {
+                            new bootstrap.Collapse(mobileNavFixed).hide();
+                        }
+                    }
+                }
+            });
+        });
+        
+        // Sync collapse between mobile and fixed mobile nav
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavFixed = document.getElementById('mobileNavFixed');
+        
+        if (mobileNav && mobileNavFixed) {
+            mobileNav.addEventListener('show.bs.collapse', function() {
+                new bootstrap.Collapse(mobileNavFixed).hide();
+            });
+            
+            mobileNavFixed.addEventListener('show.bs.collapse', function() {
+                new bootstrap.Collapse(mobileNav).hide();
+            });
         }
         
         // Start animations when page loads
@@ -343,6 +1275,16 @@
                 animateCounter('conversionsCount', 5000000);
                 animateCounter('countriesCount', 150);
             }, 500);
+            
+            // Skip to content link
+            document.querySelector('.skip-to-content').addEventListener('click', function(e) {
+                e.preventDefault();
+                const mainContent = document.getElementById('main-content');
+                if (mainContent) {
+                    mainContent.focus();
+                    mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
         });
     </script>
 </body>
