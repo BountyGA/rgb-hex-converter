@@ -177,7 +177,7 @@
             --dark: #343a40;
             --dark-bg: #1a1d23;
             --card-bg: #ffffff;
-            --body-bg: #eef2ff; /* Changed to blue background */
+            --body-bg: #004281; /* Changed to blue background */
             --border-color: #d1d9ff;
             --text-primary: #212529;
             --text-secondary: #4a5568;
@@ -261,27 +261,17 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #4a6cf7 0%, #3a5ce5 100%);
-            color: white;
-            padding: 4rem 0;
-            border-radius: 0 0 var(--radius) var(--radius);
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill="%23eef2ff"/></svg>');
-            background-size: 100% 100px;
-            background-position: bottom;
-            background-repeat: no-repeat;
-        }
+    background: linear-gradient(135deg, #4a6cf7 0%, #3a5ce5 100%);
+    color: white;
+    padding: 6rem 0 8rem; /* Increased bottom padding to account for the slant */
+    margin-bottom: 2rem;
+    position: relative;
+    
+    /* This clips the bottom of the section at an angle */
+    /* 0 0 (top-left), 100% 0 (top-right), 100% 90% (bottom-right-slant), 0 100% (bottom-left) */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
         
         .hero-title {
             font-size: 2.5rem;
