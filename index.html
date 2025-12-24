@@ -198,6 +198,7 @@
             background-color: var(--body-bg); /* Blue background */
             line-height: 1.6;
             overflow-x: hidden;
+            scroll-behavior: smooth; /* Added for smooth scrolling */
         }
         
         .skip-to-content {
@@ -210,10 +211,13 @@
             z-index: 9999;
             text-decoration: none;
             border-radius: 0 0 4px 0;
+            transition: top 0.3s ease;
         }
         
         .skip-to-content:focus {
             top: 0;
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
         }
         
         /* Header & Navigation */
@@ -530,33 +534,30 @@
         }
         
         /* FAQ */
-        .faq-question {
-            width: 100%;
-            text-align: left;
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 1rem 1.5rem;
+        .accordion-button {
             font-weight: 600;
             color: var(--text-primary);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
-            margin-bottom: 0.5rem;
+            background-color: white;
+            border: 1px solid var(--border-color);
         }
         
-        .faq-question:hover, .faq-question[aria-expanded="true"] {
+        .accordion-button:not(.collapsed) {
+            color: var(--primary);
             background-color: var(--primary-light);
             border-color: var(--primary);
-            color: var(--primary);
+            box-shadow: none;
         }
         
-        .faq-answer {
-            padding: 0;
-            border: none;
-            border-radius: 0 0 var(--radius) var(--radius);
-            background-color: transparent;
+        .accordion-button:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(74, 108, 247, 0.25);
+        }
+        
+        .accordion-item {
+            border: 1px solid var(--border-color);
+            margin-bottom: 0.5rem;
+            border-radius: var(--radius) !important;
+            overflow: hidden;
         }
         
         /* Tools Grid */
@@ -699,6 +700,11 @@
         .btn-outline-secondary i {
             display: inline-block;
         }
+        
+        /* Smooth scroll target */
+        .scroll-target {
+            scroll-margin-top: 100px; /* Adjust based on header height */
+        }
     </style>
 </head>
 <body>
@@ -720,7 +726,7 @@
                 <!-- Navigation -->
                 <nav class="main-nav" aria-label="Main Navigation">
                     <div class="nav nav-pills">
-                        <a class="nav-link active" href="/" aria-current="page">RGB to HEX</a>
+                        <a class="nav-link active" href="#converter-tool" aria-current="page">RGB to HEX</a>
                         <a class="nav-link" href="/hex-to-rgb">HEX to RGB</a>
                         <a class="nav-link" href="/color-tools">Color Tools</a>
                         <a class="nav-link" href="/tutorials">Tutorials</a>
@@ -765,7 +771,7 @@
         </section>
 
         <!-- Converter Tool Card -->
-        <section class="converter-section">
+        <section id="converter-tool" class="converter-section scroll-target">
             <div class="container">
                 <div class="converter-card">
                     <!-- Input section -->
@@ -1023,7 +1029,7 @@
                 </div>
 
                 <!-- FAQ Section -->
-                <article class="content-card faq-section">
+                <article id="faq-section" class="content-card faq-section scroll-target">
                     <h2 class="mb-4"><i class="bi bi-question-circle me-2"></i> Frequently Asked Questions</h2>
                     
                     <div class="faq-container">
@@ -1176,7 +1182,7 @@
                     <div class="footer-section">
                         <h4 class="h5 mb-3">Quick Links</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="/">RGB to HEX Converter</a></li>
+                            <li class="mb-2"><a href="#converter-tool">RGB to HEX Converter</a></li>
                             <li class="mb-2"><a href="/hex-to-rgb">HEX to RGB Converter</a></li>
                             <li class="mb-2"><a href="/color-tools">All Color Tools</a></li>
                             <li class="mb-2"><a href="/tutorials">Color Tutorials</a></li>
@@ -1189,11 +1195,11 @@
                     <div class="footer-section">
                         <h4 class="h5 mb-3">Popular Conversions</h4>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="/convert/255-0-0">Red: RGB(255, 0, 0) → #FF0000</a></li>
-                            <li class="mb-2"><a href="/convert/0-255-0">Green: RGB(0, 255, 0) → #00FF00</a></li>
-                            <li class="mb-2"><a href="/convert/0-0-255">Blue: RGB(0, 0, 255) → #0000FF</a></li>
-                            <li class="mb-2"><a href="/convert/255-255-255">White: RGB(255, 255, 255) → #FFFFFF</a></li>
-                            <li class="mb-2"><a href="/convert/0-0-0">Black: RGB(0, 0, 0) → #000000</a></li>
+                            <li class="mb-2"><a href="#converter-tool" onclick="setColorInput('255,0,0')">Red: RGB(255, 0, 0) → #FF0000</a></li>
+                            <li class="mb-2"><a href="#converter-tool" onclick="setColorInput('0,255,0')">Green: RGB(0, 255, 0) → #00FF00</a></li>
+                            <li class="mb-2"><a href="#converter-tool" onclick="setColorInput('0,0,255')">Blue: RGB(0, 0, 255) → #0000FF</a></li>
+                            <li class="mb-2"><a href="#converter-tool" onclick="setColorInput('255,255,255')">White: RGB(255, 255, 255) → #FFFFFF</a></li>
+                            <li class="mb-2"><a href="#converter-tool" onclick="setColorInput('0,0,0')">Black: RGB(0, 0, 0) → #000000</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1350,6 +1356,14 @@
             
             // Update conversion count
             updateConversionCount();
+            
+            // Auto-scroll to result section for better UX
+            setTimeout(() => {
+                const resultSection = document.querySelector('.result-section');
+                if (resultSection) {
+                    resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }, 300);
         }
         
         // Copy to clipboard
@@ -1411,6 +1425,20 @@
             }
         }
         
+        // Function to set color input and auto-scroll
+        function setColorInput(color) {
+            document.getElementById('colorInput').value = color;
+            convertColor();
+            
+            // Scroll to converter tool
+            const converterTool = document.getElementById('converter-tool');
+            if (converterTool) {
+                setTimeout(() => {
+                    converterTool.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+        
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             // Set current year
@@ -1433,24 +1461,81 @@
             document.querySelectorAll('.example-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     const color = this.getAttribute('data-color');
-                    document.getElementById('colorInput').value = color;
-                    convertColor();
+                    setColorInput(color);
                 });
             });
             
-            // Auto open first FAQ
-            const firstFaq = document.querySelector('#faq1');
-            if (firstFaq) {
-                const bsCollapse = new bootstrap.Collapse(firstFaq, {
-                    toggle: false
+            // FAQ accordion scroll into view when opened
+            const faqAccordionButtons = document.querySelectorAll('.accordion-button');
+            faqAccordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Only scroll if the FAQ is being opened (not closed)
+                    if (this.classList.contains('collapsed')) {
+                        setTimeout(() => {
+                            const faqSection = document.getElementById('faq-section');
+                            if (faqSection) {
+                                // Calculate position to scroll
+                                const headerHeight = document.querySelector('.header').offsetHeight;
+                                const elementPosition = faqSection.getBoundingClientRect().top;
+                                const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+                                
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 350); // Delay to allow accordion to open
+                    }
                 });
-                // Don't auto-open, let user click
-            }
+            });
             
             // Skip to content link
             document.querySelector('.skip-to-content').addEventListener('click', function(e) {
                 e.preventDefault();
-                document.getElementById('main-content').focus();
+                const mainContent = document.getElementById('main-content');
+                if (mainContent) {
+                    mainContent.focus();
+                    mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+            
+            // Navigation links scroll to sections
+            document.querySelectorAll('.main-nav .nav-link[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId && targetId !== '#') {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerHeight = document.querySelector('.header').offsetHeight;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Update active nav link
+                            document.querySelectorAll('.main-nav .nav-link').forEach(navLink => {
+                                navLink.classList.remove('active');
+                            });
+                            this.classList.add('active');
+                        }
+                    }
+                });
+            });
+            
+            // Footer links with color input
+            document.querySelectorAll('a[onclick^="setColorInput"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const onclickAttr = this.getAttribute('onclick');
+                    const colorMatch = onclickAttr.match(/setColorInput\('([^']+)'\)/);
+                    if (colorMatch && colorMatch[1]) {
+                        setColorInput(colorMatch[1]);
+                    }
+                });
             });
         });
     </script>
