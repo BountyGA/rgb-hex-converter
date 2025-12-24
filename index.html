@@ -170,6 +170,7 @@
         :root {
             --primary: #4a6cf7;
             --primary-dark: #3a5ce5;
+            --primary-light: #eef2ff;
             --secondary: #6c757d;
             --success: #28a745;
             --info: #17a2b8;
@@ -179,14 +180,14 @@
             --dark: #343a40;
             --dark-bg: #1a1d23;
             --card-bg: #ffffff;
-            --body-bg: #f8fafc;
-            --border-color: #e9ecef;
+            --body-bg: #eef2ff; /* Changed to blue background */
+            --border-color: #d1d9ff;
             --text-primary: #212529;
-            --text-secondary: #6c757d;
+            --text-secondary: #4a5568;
             --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-code: 'JetBrains Mono', monospace;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow: 0 5px 15px rgba(74, 108, 247, 0.1);
+            --shadow-lg: 0 10px 30px rgba(74, 108, 247, 0.15);
             --radius: 10px;
             --transition: all 0.3s ease;
         }
@@ -194,7 +195,7 @@
         body {
             font-family: var(--font-main);
             color: var(--text-primary);
-            background-color: var(--body-bg);
+            background-color: var(--body-bg); /* Blue background */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -259,23 +260,42 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #4a6cf7 0%, #6a11cb 100%);
+            background: linear-gradient(135deg, #4a6cf7 0%, #3a5ce5 100%);
             color: white;
             padding: 4rem 0;
             border-radius: 0 0 var(--radius) var(--radius);
             margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill="%23eef2ff"/></svg>');
+            background-size: 100% 100px;
+            background-position: bottom;
+            background-repeat: no-repeat;
         }
         
         .hero-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .hero-description {
             font-size: 1.1rem;
             opacity: 0.9;
             margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
         
         .feature-badges .badge {
@@ -287,6 +307,8 @@
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
             display: inline-block;
+            position: relative;
+            z-index: 1;
         }
         
         /* Converter Card */
@@ -297,6 +319,7 @@
             border: none;
             overflow: hidden;
             margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
         }
         
         .section-header {
@@ -331,6 +354,7 @@
             padding: 0.75rem 2rem;
             font-weight: 600;
             transition: var(--transition);
+            height: 50px;
         }
         
         .primary-btn:hover {
@@ -366,11 +390,19 @@
             padding: 0.5rem 1rem;
             color: var(--text-secondary);
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .copy-btn:hover {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+        
+        .copy-btn i {
+            font-size: 1.2rem;
         }
         
         .color-preview {
@@ -433,6 +465,8 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
+            border: none;
+            width: 100%;
         }
         
         .example-btn:hover {
@@ -446,6 +480,7 @@
             height: 40px;
             border-radius: var(--radius);
             margin-bottom: 0.75rem;
+            border: 1px solid rgba(0,0,0,0.1);
         }
         
         /* Content Cards */
@@ -456,6 +491,7 @@
             padding: 2rem;
             margin-bottom: 2rem;
             border: none;
+            border: 1px solid var(--border-color);
         }
         
         .steps-grid {
@@ -471,11 +507,13 @@
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
             transition: var(--transition);
+            background: white;
         }
         
         .step:hover {
             border-color: var(--primary);
             transform: translateY(-5px);
+            box-shadow: var(--shadow);
         }
         
         .step-number {
@@ -509,17 +547,16 @@
         }
         
         .faq-question:hover, .faq-question[aria-expanded="true"] {
-            background-color: #f8fafc;
+            background-color: var(--primary-light);
             border-color: var(--primary);
             color: var(--primary);
         }
         
         .faq-answer {
-            padding: 1rem 1.5rem;
-            border: 1px solid var(--border-color);
-            border-top: none;
+            padding: 0;
+            border: none;
             border-radius: 0 0 var(--radius) var(--radius);
-            background-color: #f8fafc;
+            background-color: transparent;
         }
         
         /* Tools Grid */
@@ -538,6 +575,7 @@
             color: inherit;
             transition: var(--transition);
             display: block;
+            background: white;
         }
         
         .tool-card:hover {
@@ -630,6 +668,10 @@
             .main-nav {
                 margin-top: 1rem;
             }
+            
+            .input-section, .result-section {
+                padding: 1.5rem;
+            }
         }
         
         @media (max-width: 576px) {
@@ -639,10 +681,6 @@
             
             .hero-section {
                 padding: 2.5rem 0;
-            }
-            
-            .input-section, .result-section {
-                padding: 1.5rem;
             }
         }
         
@@ -655,6 +693,11 @@
         
         .color-preview.updated {
             animation: colorPop 0.5s ease;
+        }
+        
+        /* Fix for copy button icon */
+        .btn-outline-secondary i {
+            display: inline-block;
         }
     </style>
 </head>
@@ -689,7 +732,7 @@
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb py-2 bg-light" aria-label="Breadcrumb">
+    <nav class="breadcrumb py-2 bg-white" aria-label="Breadcrumb">
         <div class="container">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
@@ -770,7 +813,7 @@
                         <div class="section-header">
                             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
                                 <h3 class="mb-2 mb-md-0"><i class="bi bi-eyedropper me-2"></i> Result & Preview</h3>
-                                <div class="auto-detect text-info">
+                                <div class="auto-detect text-primary">
                                     <i class="bi bi-magic me-1"></i> Auto-detects input format
                                 </div>
                             </div>
@@ -783,8 +826,7 @@
                                     <div class="result-value">
                                         <code id="result" aria-live="polite" class="me-3">Waiting for input...</code>
                                         <button id="copyBtn" class="copy-btn btn btn-outline-secondary" title="Copy to clipboard" aria-label="Copy converted value to clipboard">
-                                              <i class="far fa-copy"></i>
-                    
+                                            <i class="bi bi-copy"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -985,74 +1027,81 @@
                     <h2 class="mb-4"><i class="bi bi-question-circle me-2"></i> Frequently Asked Questions</h2>
                     
                     <div class="faq-container">
-                        <div class="faq-item mb-3">
-                            <button class="faq-question" aria-expanded="false" aria-controls="faq1">
-                                <span>What is RGB color format?</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                            <div id="faq1" class="faq-answer collapse">
-                                <div class="p-3">
-                                    <p>RGB stands for Red, Green, Blue. It's an additive color model where colors are created by mixing these three primary colors. Each component ranges from 0 to 255, with 0 being no color and 255 being full intensity.</p>
-                                    <p>Example: <code>rgb(255, 0, 0)</code> is pure red, <code>rgb(0, 255, 0)</code> is pure green, and <code>rgb(0, 0, 255)</code> is pure blue.</p>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                        What is RGB color format?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>RGB stands for Red, Green, Blue. It's an additive color model where colors are created by mixing these three primary colors. Each component ranges from 0 to 255, with 0 being no color and 255 being full intensity.</p>
+                                        <p>Example: <code>rgb(255, 0, 0)</code> is pure red, <code>rgb(0, 255, 0)</code> is pure green, and <code>rgb(0, 0, 255)</code> is pure blue.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="faq-item mb-3">
-                            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
-                                <span>What is HEX color format?</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                            <div id="faq2" class="faq-answer collapse">
-                                <div class="p-3">
-                                    <p>HEX (hexadecimal) color codes represent colors using a six-digit combination of numbers (0-9) and letters (A-F), prefixed with a hash (#). Each pair represents the red, green, and blue components in hexadecimal.</p>
-                                    <p>Example: <code>#FF0000</code> is red, where FF=255 (red), 00=0 (green), 00=0 (blue).</p>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        What is HEX color format?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>HEX (hexadecimal) color codes represent colors using a six-digit combination of numbers (0-9) and letters (A-F), prefixed with a hash (#). Each pair represents the red, green, and blue components in hexadecimal.</p>
+                                        <p>Example: <code>#FF0000</code> is red, where FF=255 (red), 00=0 (green), 00=0 (blue).</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="faq-item mb-3">
-                            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
-                                <span>Can I convert HEX to RGB too?</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                            <div id="faq3" class="faq-answer collapse">
-                                <div class="p-3">
-                                    <p>Yes! Our converter works both ways. Enter a HEX code like <code>#FF5733</code> and it will convert to <code>rgb(255, 87, 51)</code>. The tool automatically detects your input format and provides the opposite conversion.</p>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        Can I convert HEX to RGB too?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes! Our converter works both ways. Enter a HEX code like <code>#FF5733</code> and it will convert to <code>rgb(255, 87, 51)</code>. The tool automatically detects your input format and provides the opposite conversion.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="faq-item mb-3">
-                            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
-                                <span>Is this tool better than rgbtohex.net?</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                            <div id="faq4" class="faq-answer collapse">
-                                <div class="p-3">
-                                    <p>Our WebMas RGB to HEX converter offers several advantages:</p>
-                                    <ul>
-                                        <li><strong>Completely free</strong> with no hidden costs or premium features</li>
-                                        <li><strong>Instant bidirectional conversion</strong> (RGB→HEX and HEX→RGB)</li>
-                                        <li><strong>Visual color preview</strong> showing the actual color</li>
-                                        <li><strong>Mobile-optimized</strong> interface that works on all devices</li>
-                                        <li><strong>No registration required</strong> - use it immediately</li>
-                                        <li><strong>Copy to clipboard</strong> with one click</li>
-                                    </ul>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        Is this tool better than rgbtohex.net?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Our WebMas RGB to HEX converter offers several advantages:</p>
+                                        <ul>
+                                            <li><strong>Completely free</strong> with no hidden costs or premium features</li>
+                                            <li><strong>Instant bidirectional conversion</strong> (RGB→HEX and HEX→RGB)</li>
+                                            <li><strong>Visual color preview</strong> showing the actual color</li>
+                                            <li><strong>Mobile-optimized</strong> interface that works on all devices</li>
+                                            <li><strong>No registration required</strong> - use it immediately</li>
+                                            <li><strong>Copy to clipboard</strong> with one click</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="faq-item mb-3">
-                            <button class="faq-question" aria-expanded="false" aria-controls="faq5">
-                                <span>How accurate is the conversion?</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                            <div id="faq5" class="faq-answer collapse">
-                                <div class="p-3">
-                                    <p>Our conversions are 100% mathematically accurate. The RGB to HEX conversion follows the standard formula:</p>
-                                    <p><code>HEX = # + (Red in hex) + (Green in hex) + (Blue in hex)</code></p>
-                                    <p>Where each RGB component (0-255) is converted to its two-digit hexadecimal equivalent (00-FF). The same mathematical precision applies to HEX to RGB conversions.</p>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                        How accurate is the conversion?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Our conversions are 100% mathematically accurate. The RGB to HEX conversion follows the standard formula:</p>
+                                        <p><code>HEX = # + (Red in hex) + (Green in hex) + (Blue in hex)</code></p>
+                                        <p>Where each RGB component (0-255) is converted to its two-digit hexadecimal equivalent (00-FF). The same mathematical precision applies to HEX to RGB conversions.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1321,6 +1370,26 @@
                     this.classList.remove('btn-success');
                     this.classList.add('btn-outline-secondary');
                 }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = resultText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const originalIcon = this.innerHTML;
+                this.innerHTML = '<i class="bi bi-check"></i>';
+                this.classList.remove('btn-outline-secondary');
+                this.classList.add('btn-success');
+                
+                setTimeout(() => {
+                    this.innerHTML = originalIcon;
+                    this.classList.remove('btn-success');
+                    this.classList.add('btn-outline-secondary');
+                }, 2000);
             });
         });
         
@@ -1369,30 +1438,13 @@
                 });
             });
             
-            // FAQ accordion using Bootstrap collapse
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const targetId = this.getAttribute('aria-controls');
-                    const target = document.getElementById(targetId);
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    
-                    // Toggle icon
-                    const icon = this.querySelector('i');
-                    icon.className = isExpanded ? 'bi bi-chevron-down' : 'bi bi-chevron-up';
-                    
-                    // Update aria-expanded
-                    this.setAttribute('aria-expanded', !isExpanded);
-                });
-            });
-            
             // Auto open first FAQ
-            if (faqQuestions.length > 0) {
-                const firstFaq = faqQuestions[0];
-                const firstTarget = document.getElementById(firstFaq.getAttribute('aria-controls'));
-                firstFaq.setAttribute('aria-expanded', 'true');
-                firstFaq.querySelector('i').className = 'bi bi-chevron-up';
-                new bootstrap.Collapse(firstTarget, { toggle: true });
+            const firstFaq = document.querySelector('#faq1');
+            if (firstFaq) {
+                const bsCollapse = new bootstrap.Collapse(firstFaq, {
+                    toggle: false
+                });
+                // Don't auto-open, let user click
             }
             
             // Skip to content link
