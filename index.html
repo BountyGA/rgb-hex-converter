@@ -177,7 +177,7 @@
             --dark: #343a40;
             --dark-bg: #1a1d23;
             --card-bg: #ffffff;
-            --body-bg: #004281; /* Changed to blue background */
+            --body-bg: #fdfdfd; 
             --border-color: #d1d9ff;
             --text-primary: #212529;
             --text-secondary: #4a5568;
@@ -692,6 +692,104 @@
         .scroll-target {
             scroll-margin-top: 100px; /* Adjust based on header height */
         }
+
+      
+    .header {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .logo-wrapper {
+        transition: transform 0.3s ease;
+    }
+    
+    .logo-wrapper:hover {
+        transform: rotate(15deg);
+    }
+    
+    .logo-wrapper .badge {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.7; }
+    }
+    
+    .logo-wrapper .bg-danger {
+        animation-delay: 0s;
+    }
+    
+    .logo-wrapper .bg-success {
+        animation-delay: 0.5s;
+    }
+    
+    .logo-wrapper .bg-primary {
+        animation-delay: 1s;
+    }
+    
+    .nav-pills .nav-link {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .nav-pills .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(74, 108, 247, 0.1);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+    
+    .nav-pills .nav-link:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .nav-pills .nav-link.active {
+        background: linear-gradient(135deg, #4a6cf7 0%, #6a11cb 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+    }
+    
+    .nav-pills .nav-link .badge {
+        font-size: 0.5em;
+        padding: 0.2em 0.4em;
+        animation: bounce 1s infinite alternate;
+    }
+    
+    @keyframes bounce {
+        from { transform: translateY(0); }
+        to { transform: translateY(-3px); }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .logo-text h1 {
+            font-size: 1.25rem;
+        }
+        
+        .subtitle {
+            font-size: 0.75rem;
+        }
+        
+        .nav-pills {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+        
+        .nav-pills .nav-link {
+            font-size: 0.875rem;
+            padding: 0.375rem 0.75rem;
+        }
+    }
     </style>
 </head>
 <body>
@@ -699,37 +797,165 @@
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
     <!-- Header -->
-    <header class="header">
-        <div class="container py-3">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="logo-container mb-3 mb-md-0">
-                    <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo" width="40" height="40">
+    <header class="header shadow-sm sticky-top">
+    <div class="container py-3">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo Container -->
+            <div class="logo-container mb-3 mb-md-0">
+                <div class="d-flex align-items-center">
+                    <!-- Logo with background and animation -->
+                    <div class="logo-wrapper position-relative me-3">
+                        <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo rounded-circle shadow-sm" width="50" height="50">
+                        <!-- Animated color dots around logo -->
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger p-1" style="font-size: 6px;"></span>
+                        <span class="position-absolute top-100 start-0 translate-middle badge rounded-circle bg-success p-1" style="font-size: 6px;"></span>
+                        <span class="position-absolute top-100 start-100 translate-middle badge rounded-circle bg-primary p-1" style="font-size: 6px;"></span>
+                    </div>
+                    
+                    <!-- Logo Text -->
                     <div class="logo-text">
-                        <h1>RGB ↔ HEX Color Converter</h1>
-                        <p class="subtitle">Free instant conversion tool for web developers & designers</p>
+                        <h1 class="h3 fw-bold mb-0 text-primary">
+                            <span class="d-block d-md-inline">RGB ↔ HEX</span>
+                            <span class="d-block d-md-inline ms-md-2">Color Converter</span>
+                        </h1>
+                        <p class="subtitle text-muted mb-0 small d-none d-md-block">
+                            Free instant conversion tool for web developers & designers
+                        </p>
+                        <p class="subtitle text-muted mb-0 small d-md-none">
+                            Free color conversion tool
+                        </p>
                     </div>
                 </div>
-                
-                <!-- Navigation -->
-                <nav class="main-nav" aria-label="Main Navigation">
-                    <div class="nav nav-pills">
-                        <a class="nav-link active" href="#converter-tool" aria-current="page">RGB to HEX</a>
-                        <a class="nav-link" href="/hex-to-rgb">HEX to RGB</a>
-                        <a class="nav-link" href="/color-tools">Color Tools</a>
-                        <a class="nav-link" href="/tutorials">Tutorials</a>
-                        <a class="nav-link" href="/about">About</a>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <div class="nav nav-pills bg-light rounded-pill p-1">
+                    <!-- RGB to HEX Link with badge -->
+                    <a class="nav-link active rounded-pill position-relative" href="#converter-tool" aria-current="page">
+                        <i class="bi bi-arrow-left-right me-1 d-none d-md-inline"></i>
+                        <span>RGB to HEX</span>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6em;">
+                            <i class="bi bi-star-fill"></i>
+                        </span>
+                    </a>
+                    
+                    <!-- HEX to RGB Link -->
+                    <a class="nav-link rounded-pill" href="/hex-to-rgb">
+                        <i class="bi bi-arrow-right-left me-1 d-none d-md-inline"></i>
+                        <span>HEX to RGB</span>
+                    </a>
+                    
+                    <!-- Color Tools Link with dropdown -->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link rounded-pill dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tools me-1 d-none d-md-inline"></i>
+                            <span>Tools</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="/color-picker"><i class="bi bi-eyedropper me-2"></i>Color Picker</a></li>
+                            <li><a class="dropdown-item" href="/color-palette"><i class="bi bi-palette me-2"></i>Palette Generator</a></li>
+                            <li><a class="dropdown-item" href="/color-contrast"><i class="bi bi-contrast me-2"></i>Contrast Checker</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/color-tools"><i class="bi bi-grid-3x3-gap me-2"></i>All Tools</a></li>
+                        </ul>
                     </div>
-                </nav>
+                    
+                    <!-- Tutorials Link -->
+                    <a class="nav-link rounded-pill" href="/tutorials">
+                        <i class="bi bi-book me-1 d-none d-md-inline"></i>
+                        <span>Tutorials</span>
+                    </a>
+                    
+                    <!-- About Link -->
+                    <a class="nav-link rounded-pill" href="/about">
+                        <i class="bi bi-info-circle me-1 d-none d-md-inline"></i>
+                        <span>About</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu toggle (for smaller screens) -->
+                <button class="btn btn-primary rounded-pill d-md-none mt-2 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav">
+                    <i class="bi bi-list me-2"></i>Menu
+                </button>
+                
+                <!-- Mobile Navigation (Collapsed) -->
+                <div class="collapse mt-2" id="mobileNav">
+                    <div class="card card-body">
+                        <div class="d-grid gap-2">
+                            <a class="btn btn-primary" href="#converter-tool">
+                                <i class="bi bi-arrow-left-right me-2"></i>RGB to HEX
+                            </a>
+                            <a class="btn btn-outline-primary" href="/hex-to-rgb">
+                                <i class="bi bi-arrow-right-left me-2"></i>HEX to RGB
+                            </a>
+                            <a class="btn btn-outline-primary" href="/color-tools">
+                                <i class="bi bi-tools me-2"></i>Color Tools
+                            </a>
+                            <a class="btn btn-outline-primary" href="/tutorials">
+                                <i class="bi bi-book me-2"></i>Tutorials
+                            </a>
+                            <a class="btn btn-outline-primary" href="/about">
+                                <i class="bi bi-info-circle me-2"></i>About
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Quick Stats Bar -->
+    <div class="bg-primary bg-opacity-10 py-2 border-top border-bottom">
+        <div class="container">
+            <div class="row g-2 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-lightning-charge-fill text-primary me-2"></i>
+                        <div class="text-start">
+                            <div class="fw-bold fs-5" id="conversionCount">0</div>
+                            <div class="text-muted small">Conversions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-clock-fill text-success me-2"></i>
+                        <div class="text-start">
+                            <div class="fw-bold fs-5">&lt;1s</div>
+                            <div class="text-muted small">Conversion Time</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-phone-fill text-info me-2"></i>
+                        <div class="text-start">
+                            <div class="fw-bold fs-5">100%</div>
+                            <div class="text-muted small">Mobile Ready</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-lock-fill text-warning me-2"></i>
+                        <div class="text-start">
+                            <div class="fw-bold fs-5">Free</div>
+                            <div class="text-muted small">No Registration</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Breadcrumb Navigation -->
     <nav class="breadcrumb py-2 bg-white" aria-label="Breadcrumb">
         <div class="container">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
-                <li class="breadcrumb-item"><a href="/tools" class="text-decoration-none">Tools</a></li>
+                <li class="breadcrumb-item"><a href="/color-tools" class="text-decoration-none">Tools</a></li>
                 <li class="breadcrumb-item active" aria-current="page">RGB to HEX Converter</li>
             </ol>
         </div>
@@ -1525,6 +1751,47 @@
                 });
             });
         });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Update conversion count from localStorage
+        function updateConversionCount() {
+            const savedCount = localStorage.getItem('conversionCount') || '0';
+            document.getElementById('conversionCount').textContent = 
+                parseInt(savedCount).toLocaleString();
+        }
+        
+        // Initialize
+        updateConversionCount();
+        
+        // Update count when conversions happen
+        document.addEventListener('conversionComplete', function() {
+            updateConversionCount();
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Close mobile menu if open
+                        const mobileNav = document.getElementById('mobileNav');
+                        if (mobileNav.classList.contains('show')) {
+                            new bootstrap.Collapse(mobileNav).hide();
+                        }
+                    }
+                }
+            });
+        });
+    });
+        
     </script>
 </body>
 </html>
