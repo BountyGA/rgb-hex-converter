@@ -2,23 +2,42 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <title>Color Tutorials | Learn Web Design & Development | WebMas</title>
+    
+    <!-- Primary Meta Tags -->
     <meta name="description" content="Free color tutorials for web developers and designers. Learn RGB vs HEX, color theory, CSS colors, accessibility, and how to use our color tools effectively.">
-    <meta name="keywords" content="color tutorials, RGB tutorial, HEX tutorial, color theory, CSS colors, web design tutorials, color accessibility, color conversion tutorial">
+    <meta name="keywords" content="color tutorials, RGB tutorial, HEX tutorial, color theory, CSS colors, web design tutorials, color accessibility, color conversion tutorial, web development tutorials">
     <meta name="author" content="WebMas">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical & Alternate URLs -->
     <link rel="canonical" href="https://rgbtohex.site/tutorials">
     
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rgbtohex.site/tutorials">
     <meta property="og:title" content="Color Tutorials | Learn Web Design & Development | WebMas">
     <meta property="og:description" content="Free tutorials on color theory, conversion, and web design best practices.">
-    <meta property="og:url" content="https://rgbtohex.site/tutorials">
-    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rgbtohex.site/webmasLogo.png">
+    <meta property="og:image:alt" content="WebMas Color Tutorials">
+    <meta property="og:site_name" content="WebMas Color Tools">
     
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Color Tutorials | Learn Web Design & Development | WebMas">
+    <meta name="twitter:description" content="Free tutorials on color theory, conversion, and web design best practices.">
+    <meta name="twitter:image" content="https://rgbtohex.site/webmasLogo.png">
+    <meta name="twitter:image:alt" content="WebMas Tutorials">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4a6cf7">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-TileColor" content="#4a6cf7">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="webmasLogo.png">
@@ -46,123 +65,1328 @@
         ]
     }
     </script>
+    
+    <!-- Adsterra Script -->
+    <script type="text/javascript" src="https://pl28279577.effectivegatecpm.com/fa/7b/6d/fa7b6db0967f1daa545d040c6dd011f4.js"></script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles (matching tools page) -->
+    <style>
+        :root {
+            --primary: #4a6cf7;
+            --primary-dark: #3a5ce5;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --dark-bg: #1a1d23;
+            --card-bg: #ffffff;
+            --body-bg: #fdfdfd; 
+            --border-color: #d1d9ff;
+            --text-primary: #212529;
+            --text-secondary: #4a5568;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+            --shadow: 0 5px 15px rgba(74, 108, 247, 0.1);
+            --shadow-lg: 0 10px 30px rgba(74, 108, 247, 0.15);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            color: var(--text-primary);
+            background-color: var(--body-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 9999;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+            transition: top 0.3s ease;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        /* Desktop: sticky header */
+        @media (min-width: 768px) {
+            .header {
+                position: sticky;
+                top: 0;
+            }
+        }
+        
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--dark);
+        }
+        
+        .logo-text .subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #4a6cf7 0%, #3a5ce5 100%);
+            color: white;
+            padding: 6rem 0 8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-badges .badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: none;
+            border: 1px solid var(--border-color);
+        }
+        
+        /* Featured Tutorial */
+        .featured-tutorial {
+            background: linear-gradient(135deg, rgba(74, 108, 247, 0.05) 0%, rgba(74, 108, 247, 0.02) 100%);
+            border: 2px solid var(--primary);
+        }
+        
+        .featured-banner {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .featured-label {
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .difficulty {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .difficulty.beginner {
+            background: rgba(40, 167, 69, 0.1);
+            color: var(--success);
+        }
+        
+        .difficulty.intermediate {
+            background: rgba(255, 193, 7, 0.1);
+            color: var(--warning);
+        }
+        
+        .difficulty.advanced {
+            background: rgba(220, 53, 69, 0.1);
+            color: var(--danger);
+        }
+        
+        .time {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .featured-content h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .featured-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .tutorial-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .color-comparison {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .color-format {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .format-label {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .format-example {
+            padding: 2rem;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #ff6b6b, #4a6cf7, #10b981);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .format-example code {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-family: var(--font-code);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .vs-label {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .category-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .category-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .category-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tutorial-count {
+            background: rgba(74, 108, 247, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Tutorial Filters */
+        .tutorial-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(74, 108, 247, 0.05);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-group label {
+            font-weight: 500;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+        
+        .filter-group select {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            background: white;
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            min-width: 150px;
+        }
+        
+        /* Tutorials List */
+        .tutorials-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tutorial-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .tutorial-card.expanded {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .tutorial-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .tutorial-card.expanded .tutorial-header {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .tutorial-header .tutorial-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .tutorial-header h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .tutorial-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        .tutorial-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .tutorial-card.expanded .tutorial-content {
+            padding: 1.5rem;
+        }
+        
+        .tutorial-content h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .tutorial-content ul {
+            margin: 0 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .tutorial-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .code-example {
+            background: rgba(33, 37, 41, 0.05);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .code-example h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .code-example pre {
+            margin: 0;
+            overflow-x: auto;
+        }
+        
+        .code-example code {
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+        
+        .tutorial-tips {
+            margin-bottom: 1.5rem;
+        }
+        
+        .tutorial-tips h5 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .tip {
+            background: rgba(74, 108, 247, 0.05);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+        
+        .tip i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tip p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .tip strong {
+            color: var(--text-primary);
+        }
+        
+        /* Learning Path */
+        .learning-path {
+            margin-top: 2rem;
+        }
+        
+        .path-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .path-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .step-content p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-duration {
+            background: rgba(74, 108, 247, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Resources Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .resource-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .resource-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .resource-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .resource-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: var(--text-secondary);
+        }
+        
+        .resource-card li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Primary Button */
+        .primary-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .primary-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+            color: white;
+        }
+        
+        .read-more-btn {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .read-more-btn:hover {
+            background: rgba(74, 108, 247, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.1);
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .footer h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+        
+        .tutorial-stats {
+            margin-top: 1rem;
+        }
+        
+        .tutorial-stats p {
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .educational-note {
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .breadcrumb .container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb ol {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb li:not(:last-child)::after {
+            content: "/";
+            margin: 0 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            color: var(--text-secondary);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .featured-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .category-grid,
+            .resources-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-section {
+                padding: 4rem 0 6rem;
+            }
+            
+            .featured-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tutorial-filters {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .filter-group {
+                width: 100%;
+            }
+            
+            .filter-group select {
+                flex-grow: 1;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-grid,
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .path-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                align-self: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 3rem 0;
+            }
+            
+            .content-card {
+                padding: 1.5rem;
+            }
+            
+            .tutorial-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .featured-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Mobile Header Styles */
+        @media (max-width: 767.98px) {
+            .header {
+                position: relative;
+            }
+            
+            .header.fixed-hidden {
+                opacity: 0;
+                transform: translateY(-100%);
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+        }
+        
+        .fixed-mobile-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1050;
+        }
+        
+        .fixed-mobile-header.visible {
+            transform: translateY(0);
+        }
+        
+        /* Navigation styles */
+        .nav-pills .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-pills .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .nav-pills .nav-link:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .nav-pills .nav-link.active {
+            background: linear-gradient(135deg, #4a6cf7 0%, #6a11cb 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+        }
+        
+        /* Mobile-specific styles */
+        @media (max-width: 767.98px) {
+            .logo-text h1 {
+                font-size: 1.25rem;
+            }
+            
+            .subtitle {
+                font-size: 0.75rem;
+            }
+            
+            .container.py-3 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            #mobileNav .card-body {
+                padding: 0.75rem;
+            }
+            
+            #mobileNav .btn {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Section title styles */
+        .section-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Category labels */
+        .category {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .category.basics {
+            background: rgba(40, 167, 69, 0.1);
+            color: var(--success);
+        }
+        
+        .category.design {
+            background: rgba(255, 107, 107, 0.1);
+            color: #ff6b6b;
+        }
+        
+        .category.css {
+            background: rgba(74, 108, 247, 0.1);
+            color: var(--primary);
+        }
+        
+        .category.accessibility {
+            background: rgba(111, 66, 193, 0.1);
+            color: #6f42c1;
+        }
+        
+        .category.tools {
+            background: rgba(23, 162, 184, 0.1);
+            color: var(--info);
+        }
+        
+        .category.conversion {
+            background: rgba(255, 193, 7, 0.1);
+            color: var(--warning);
+        }
+        
+        .reading-time {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip to main content -->
+    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
-    <div class="wrapper">
-        <!-- Header -->
-        <header class="header" role="banner">
-            <div class="header-content">
-                <div class="logo-container">
-                    <a href="/">
-                        <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo" width="40" height="40">
-                        <div class="logo-text">
-                            <h1>WebMas Color Tools</h1>
-                            <p class="subtitle">Free tools for developers & designers</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <!-- Logo Container -->
+                <div class="logo-container mb-3 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <!-- Logo with background and animation -->
+                        <div class="logo-wrapper position-relative me-3">
+                            <img src="webmasLogo.png" alt="WebMas Logo" class="site-logo rounded-circle shadow-sm" width="50" height="50">
+                            <!-- Animated color dots around logo -->
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger p-1" style="font-size: 6px;"></span>
+                            <span class="position-absolute top-100 start-0 translate-middle badge rounded-circle bg-success p-1" style="font-size: 6px;"></span>
+                            <span class="position-absolute top-100 start-100 translate-middle badge rounded-circle bg-primary p-1" style="font-size: 6px;"></span>
                         </div>
-                    </a>
+                        
+                        <!-- Logo Text -->
+                        <div class="logo-text">
+                            <h1 class="h3 fw-bold mb-0 text-primary">
+                                <span class="d-block d-md-inline">WebMas</span>
+                                <span class="d-block d-md-inline ms-md-2">Color Tools</span>
+                            </h1>
+                            <p class="subtitle text-muted mb-0 small d-none d-md-block">
+                                Free tools for web developers & designers
+                            </p>
+                            <p class="subtitle text-muted mb-0 small d-md-none">
+                                Free color tools
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Navigation -->
-                <nav class="main-nav" aria-label="Main Navigation">
-                    <ul>
-                        <li><a href="/">RGB to HEX</a></li>
-                        <li><a href="/hex-to-rgb">HEX to RGB</a></li>
-                        <li><a href="/color-tools">Color Tools</a></li>
-                        <li><a href="/tutorials" class="active">Tutorials</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
+                <!-- Desktop Navigation -->
+                <nav class="main-nav d-none d-md-block" aria-label="Main Navigation">
+                    <div class="nav nav-pills bg-light rounded-pill p-1">
+                        <!-- RGB to HEX Link -->
+                        <a class="nav-link rounded-pill" href="/">
+                            <i class="bi bi-arrow-left-right me-1"></i>
+                            <span>RGB to HEX</span>
+                        </a>
+                        
+                        <!-- HEX to RGB Link -->
+                        <a class="nav-link rounded-pill" href="/hex-to-rgb">
+                            <i class="bi bi-arrow-right-left me-1"></i>
+                            <span>HEX to RGB</span>
+                        </a>
+                        
+                        <!-- Color Tools Link -->
+                        <a class="nav-link rounded-pill" href="/color-tools">
+                            <i class="bi bi-tools me-1"></i>
+                            <span>Color Tools</span>
+                        </a>
+                        
+                        <!-- Tutorials Link -->
+                        <a class="nav-link rounded-pill active" href="/tutorials" aria-current="page">
+                            <i class="bi bi-book me-1"></i>
+                            <span>Tutorials</span>
+                        </a>
+                        
+                        <!-- About Link -->
+                        <a class="nav-link rounded-pill" href="/about">
+                            <i class="bi bi-info-circle me-1"></i>
+                            <span>About</span>
+                        </a>
+                    </div>
                 </nav>
+                
+                <!-- Mobile Menu Toggle Button -->
+                <button class="btn btn-primary rounded-pill d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav">
+                    <i class="bi bi-list me-2"></i>Menu
+                </button>
             </div>
-        </header>
-
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="container">
-                <ol>
-                    <li><a href="/">Home</a></li>
-                    <li><span aria-current="page">Tutorials</span></li>
-                </ol>
+            
+            <!-- Mobile Navigation (Collapsible) -->
+            <div class="collapse mt-3 d-md-none" id="mobileNav">
+                <div class="card card-body shadow-sm">
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" href="/">
+                            <i class="bi bi-arrow-left-right me-2"></i>RGB to HEX
+                        </a>
+                        <a class="btn btn-outline-primary" href="/hex-to-rgb">
+                            <i class="bi bi-arrow-right-left me-2"></i>HEX to RGB
+                        </a>
+                        <a class="btn btn-outline-primary" href="/color-tools">
+                            <i class="bi bi-tools me-2"></i>Color Tools
+                        </a>
+                        <a class="btn btn-primary" href="/tutorials">
+                            <i class="bi bi-book me-2"></i>Tutorials
+                        </a>
+                        <a class="btn btn-outline-primary" href="/about">
+                            <i class="bi bi-info-circle me-2"></i>About
+                        </a>
+                    </div>
+                </div>
             </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main id="main-content" class="main-content">
+        </div>
+        
+        <!-- Quick Stats Bar -->
+        <div class="bg-primary bg-opacity-10 py-2 border-top border-bottom d-none d-md-block">
             <div class="container">
-                <!-- Hero Section -->
-                <section class="hero-section">
-                    <div class="hero-text">
-                        <h1 class="hero-title">Color Tutorials & Guides</h1>
-                        <p class="hero-description">Learn everything about colors in web development and design. From basics to advanced techniques.</p>
-                        <div class="feature-badges">
-                            <span class="badge"><i class="fas fa-graduation-cap"></i> Beginner Friendly</span>
-                            <span class="badge"><i class="fas fa-code"></i> Practical Examples</span>
-                            <span class="badge"><i class="fas fa-rocket"></i> Free Forever</span>
-                            <span class="badge"><i class="fas fa-clock"></i> 5-10 min read</span>
+                <div class="row g-2 text-center">
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-book text-primary me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">25+</div>
+                                <div class="text-muted small">Tutorials</div>
+                            </div>
                         </div>
                     </div>
-                </section>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-people text-success me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">50K+</div>
+                                <div class="text-muted small">Monthly Learners</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-clock text-info me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">5-10 min</div>
+                                <div class="text-muted small">Read Time</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-unlock text-warning me-2"></i>
+                            <div class="text-start">
+                                <div class="fw-bold fs-5">100%</div>
+                                <div class="text-muted small">Free Forever</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Stats (Compact) -->
+        <div class="bg-primary bg-opacity-10 py-1 d-md-none">
+            <div class="container">
+                <div class="row g-1 text-center small">
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-book text-primary mb-1"></i>
+                            <div class="fw-bold">25+</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Tutorials</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-people text-success mb-1"></i>
+                            <div class="fw-bold">50K+</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Learners</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-clock text-info mb-1"></i>
+                            <div class="fw-bold">5-10 min</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Read</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-unlock text-warning mb-1"></i>
+                            <div class="fw-bold">Free</div>
+                            <div class="text-muted" style="font-size: 0.7rem;">Always</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Fixed Mobile Header (appears on scroll) -->
+    <div class="fixed-mobile-header d-md-none">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo (Mini) -->
+                <div class="d-flex align-items-center">
+                    <img src="webmasLogo.png" alt="WebMas Logo" class="rounded-circle me-2" width="32" height="32">
+                    <span class="fw-bold text-primary">Tutorials</span>
+                </div>
+                
+                <!-- Menu Button -->
+                <button class="btn btn-primary btn-sm rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavFixed" aria-expanded="false" aria-controls="mobileNavFixed">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation for Fixed Header -->
+            <div class="collapse mt-2" id="mobileNavFixed">
+                <div class="card card-body shadow-sm">
+                    <div class="d-grid gap-1">
+                        <a class="btn btn-outline-primary btn-sm" href="/">
+                            <i class="bi bi-arrow-left-right me-2"></i>RGB to HEX
+                        </a>
+                        <a class="btn btn-outline-primary btn-sm" href="/hex-to-rgb">
+                            <i class="bi bi-arrow-right-left me-2"></i>HEX to RGB
+                        </a>
+                        <a class="btn btn-outline-primary btn-sm" href="/color-tools">
+                            <i class="bi bi-tools me-2"></i>Color Tools
+                        </a>
+                        <a class="btn btn-primary btn-sm" href="/tutorials">
+                            <i class="bi bi-book me-2"></i>Tutorials
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- Featured Tutorial -->
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb py-2 bg-white" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tutorials</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10">
+                        <h1 class="hero-title">Color Tutorials & Guides</h1>
+                        <p class="hero-description">Learn everything about colors in web development and design. From basics to advanced techniques.</p>
+                        <div class="feature-badges mb-4">
+                            <span class="badge"><i class="bi bi-mortarboard me-1"></i> Beginner Friendly</span>
+                            <span class="badge"><i class="bi bi-code me-1"></i> Practical Examples</span>
+                            <span class="badge"><i class="bi bi-unlock me-1"></i> Free Forever</span>
+                            <span class="badge"><i class="bi bi-clock me-1"></i> 5-10 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tutorial -->
+        <section class="content-section">
+            <div class="container">
                 <article class="content-card featured-tutorial">
                     <div class="featured-banner">
-                        <span class="featured-label"><i class="fas fa-star"></i> Featured Tutorial</span>
-                        <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
-                        <span class="time"><i class="fas fa-clock"></i> 8 min read</span>
+                        <span class="featured-label"><i class="bi bi-star-fill"></i> Featured Tutorial</span>
+                        <span class="difficulty beginner"><i class="bi bi-emoji-smile"></i> Beginner</span>
+                        <span class="time"><i class="bi bi-clock"></i> 8 min read</span>
                     </div>
+                    
                     <div class="featured-content">
                         <div class="featured-text">
-                            <h2><i class="fas fa-exchange-alt"></i> RGB vs HEX: The Complete Guide</h2>
+                            <h2><i class="bi bi-arrow-left-right me-2"></i> RGB vs HEX: The Complete Guide</h2>
                             <p class="featured-excerpt">Understanding the differences between RGB and HEX color formats is essential for every web developer and designer. This comprehensive guide covers everything you need to know.</p>
+                            
                             <div class="tutorial-meta">
                                 <div class="meta-item">
-                                    <i class="fas fa-user"></i>
+                                    <i class="bi bi-person"></i>
                                     <span>Written by WebMas Team</span>
                                 </div>
                                 <div class="meta-item">
-                                    <i class="fas fa-calendar"></i>
+                                    <i class="bi bi-calendar"></i>
                                     <span>Updated: Dec 2024</span>
                                 </div>
                                 <div class="meta-item">
-                                    <i class="fas fa-eye"></i>
+                                    <i class="bi bi-eye"></i>
                                     <span>25,000+ reads</span>
                                 </div>
                             </div>
+                            
                             <a href="#rgb-vs-hex" class="primary-btn">
-                                <i class="fas fa-book-open"></i> Read Tutorial
+                                <i class="bi bi-book"></i> Read Tutorial
                             </a>
                         </div>
-                        <div class="featured-image">
-                            <div class="color-comparison">
-                                <div class="color-format">
-                                    <div class="format-label">RGB</div>
-                                    <div class="format-example" style="background: linear-gradient(135deg, #ff6b6b, #4a6cf7, #10b981);">
-                                        <code>rgb(255, 107, 107)</code>
-                                    </div>
+                        
+                        <div class="color-comparison">
+                            <div class="color-format">
+                                <div class="format-label">RGB</div>
+                                <div class="format-example">
+                                    <code>rgb(255, 107, 107)</code>
                                 </div>
-                                <div class="vs-label">VS</div>
-                                <div class="color-format">
-                                    <div class="format-label">HEX</div>
-                                    <div class="format-example" style="background: linear-gradient(135deg, #ff6b6b, #4a6cf7, #10b981);">
-                                        <code>#FF6B6B</code>
-                                    </div>
+                            </div>
+                            <div class="vs-label">VS</div>
+                            <div class="color-format">
+                                <div class="format-label">HEX</div>
+                                <div class="format-example">
+                                    <code>#FF6B6B</code>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
 
-                <!-- Tutorial Categories -->
-                <section class="content-card">
-                    <h2><i class="fas fa-th-large"></i> Browse by Category</h2>
-                    <p class="section-description">Find tutorials based on your skill level and interests.</p>
+        <!-- Tutorial Categories -->
+        <section class="content-section">
+            <div class="container">
+                <article class="content-card">
+                    <h2 class="mb-4"><i class="bi bi-grid-3x3-gap me-2"></i> Browse by Category</h2>
+                    <p class="section-description mb-4">Find tutorials based on your skill level and interests.</p>
                     
                     <div class="category-grid">
                         <a href="#basics" class="category-card">
                             <div class="category-icon">
-                                <i class="fas fa-seedling"></i>
+                                <i class="bi bi-emoji-smile"></i>
                             </div>
                             <h3>Basics</h3>
                             <p>Start here if you're new to colors in web development</p>
@@ -171,7 +1395,7 @@
                         
                         <a href="#conversion" class="category-card">
                             <div class="category-icon">
-                                <i class="fas fa-exchange-alt"></i>
+                                <i class="bi bi-arrow-left-right"></i>
                             </div>
                             <h3>Conversion</h3>
                             <p>Learn how to convert between color formats</p>
@@ -180,7 +1404,7 @@
                         
                         <a href="#css" class="category-card">
                             <div class="category-icon">
-                                <i class="fas fa-code"></i>
+                                <i class="bi bi-code-slash"></i>
                             </div>
                             <h3>CSS Colors</h3>
                             <p>Master color implementation in CSS</p>
@@ -189,7 +1413,7 @@
                         
                         <a href="#design" class="category-card">
                             <div class="category-icon">
-                                <i class="fas fa-paint-brush"></i>
+                                <i class="bi bi-palette"></i>
                             </div>
                             <h3>Design Theory</h3>
                             <p>Color theory and design principles</p>
@@ -198,7 +1422,7 @@
                         
                         <a href="#accessibility" class="category-card">
                             <div class="category-icon">
-                                <i class="fas fa-universal-access"></i>
+                                <i class="bi bi-universal-access"></i>
                             </div>
                             <h3>Accessibility</h3>
                             <p>Make your colors accessible to everyone</p>
@@ -207,23 +1431,27 @@
                         
                         <a href="#tools" class="category-card">
                             <div class="category-icon">
-                                <i class="fas fa-tools"></i>
+                                <i class="bi bi-tools"></i>
                             </div>
                             <h3>Tool Guides</h3>
                             <p>How to use WebMas color tools effectively</p>
                             <span class="tutorial-count">6 tutorials</span>
                         </a>
                     </div>
-                </section>
+                </article>
+            </div>
+        </section>
 
-                <!-- All Tutorials List -->
-                <section class="content-card">
-                    <h2><i class="fas fa-list"></i> All Tutorials</h2>
-                    <p class="section-description">Browse our complete collection of free tutorials. New tutorials added monthly.</p>
+        <!-- All Tutorials List -->
+        <section class="content-section">
+            <div class="container">
+                <article class="content-card">
+                    <h2 class="mb-4"><i class="bi bi-list-ul me-2"></i> All Tutorials</h2>
+                    <p class="section-description mb-4">Browse our complete collection of free tutorials. New tutorials added monthly.</p>
                     
                     <div class="tutorial-filters">
                         <div class="filter-group">
-                            <label for="difficultyFilter"><i class="fas fa-chart-line"></i> Difficulty:</label>
+                            <label for="difficultyFilter"><i class="bi bi-graph-up"></i> Difficulty:</label>
                             <select id="difficultyFilter">
                                 <option value="all">All Levels</option>
                                 <option value="beginner">Beginner</option>
@@ -232,7 +1460,7 @@
                             </select>
                         </div>
                         <div class="filter-group">
-                            <label for="categoryFilter"><i class="fas fa-tag"></i> Category:</label>
+                            <label for="categoryFilter"><i class="bi bi-tag"></i> Category:</label>
                             <select id="categoryFilter">
                                 <option value="all">All Categories</option>
                                 <option value="basics">Basics</option>
@@ -244,7 +1472,7 @@
                             </select>
                         </div>
                         <div class="filter-group">
-                            <label for="sortFilter"><i class="fas fa-sort"></i> Sort by:</label>
+                            <label for="sortFilter"><i class="bi bi-sort-down"></i> Sort by:</label>
                             <select id="sortFilter">
                                 <option value="newest">Newest First</option>
                                 <option value="popular">Most Popular</option>
@@ -258,15 +1486,15 @@
                         <article class="tutorial-card" id="rgb-vs-hex" data-difficulty="beginner" data-category="basics" data-popularity="high">
                             <div class="tutorial-header">
                                 <div class="tutorial-meta">
-                                    <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                                    <span class="difficulty beginner"><i class="bi bi-emoji-smile"></i> Beginner</span>
                                     <span class="category basics">Basics</span>
-                                    <span class="reading-time"><i class="fas fa-clock"></i> 8 min</span>
+                                    <span class="reading-time"><i class="bi bi-clock"></i> 8 min</span>
                                 </div>
                                 <h3>RGB vs HEX: The Complete Guide</h3>
                                 <p class="tutorial-excerpt">Learn the fundamental differences between RGB and HEX color formats, when to use each, and how to convert between them effectively.</p>
                             </div>
                             <div class="tutorial-content">
-                                <h4>What You'll Learn:</h4>
+                                <h4><i class="bi bi-check-circle me-2"></i> What You'll Learn:</h4>
                                 <ul>
                                     <li>How RGB color format works</li>
                                     <li>How HEX color format works</li>
@@ -276,7 +1504,7 @@
                                 </ul>
                                 
                                 <div class="code-example">
-                                    <h5><i class="fas fa-code"></i> Example Conversion:</h5>
+                                    <h5><i class="bi bi-code-slash me-2"></i> Example Conversion:</h5>
                                     <pre><code>// RGB to HEX conversion
 rgb(255, 0, 0) → #FF0000
 
@@ -285,25 +1513,25 @@ rgb(255, 0, 0) → #FF0000
                                 </div>
                                 
                                 <div class="tutorial-tips">
-                                    <h5><i class="fas fa-lightbulb"></i> Key Takeaways:</h5>
+                                    <h5><i class="bi bi-lightbulb me-2"></i> Key Takeaways:</h5>
                                     <div class="tips-grid">
                                         <div class="tip">
-                                            <i class="fas fa-paint-brush"></i>
+                                            <i class="bi bi-palette"></i>
                                             <p><strong>Design Software:</strong> Most design tools use RGB</p>
                                         </div>
                                         <div class="tip">
-                                            <i class="fas fa-code"></i>
+                                            <i class="bi bi-code-slash"></i>
                                             <p><strong>Web Development:</strong> HEX is standard in CSS</p>
                                         </div>
                                         <div class="tip">
-                                            <i class="fas fa-mobile-alt"></i>
+                                            <i class="bi bi-phone"></i>
                                             <p><strong>Performance:</strong> HEX is more compact in code</p>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <a href="#" class="read-more-btn">
-                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                    <i class="bi bi-book"></i> Read Full Tutorial
                                 </a>
                             </div>
                         </article>
@@ -312,15 +1540,15 @@ rgb(255, 0, 0) → #FF0000
                         <article class="tutorial-card" data-difficulty="beginner" data-category="design" data-popularity="medium">
                             <div class="tutorial-header">
                                 <div class="tutorial-meta">
-                                    <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                                    <span class="difficulty beginner"><i class="bi bi-emoji-smile"></i> Beginner</span>
                                     <span class="category design">Design</span>
-                                    <span class="reading-time"><i class="fas fa-clock"></i> 10 min</span>
+                                    <span class="reading-time"><i class="bi bi-clock"></i> 10 min</span>
                                 </div>
                                 <h3>Color Theory for Web Designers</h3>
                                 <p class="tutorial-excerpt">Essential color theory principles every web designer should know. Learn about color wheels, harmonies, and psychology.</p>
                             </div>
                             <div class="tutorial-content">
-                                <h4>Topics Covered:</h4>
+                                <h4><i class="bi bi-check-circle me-2"></i> Topics Covered:</h4>
                                 <ul>
                                     <li>Color wheel and relationships</li>
                                     <li>Color harmonies (complementary, analogous, etc.)</li>
@@ -329,7 +1557,7 @@ rgb(255, 0, 0) → #FF0000
                                     <li>Tools for color scheme generation</li>
                                 </ul>
                                 <a href="#" class="read-more-btn">
-                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                    <i class="bi bi-book"></i> Read Full Tutorial
                                 </a>
                             </div>
                         </article>
@@ -338,15 +1566,15 @@ rgb(255, 0, 0) → #FF0000
                         <article class="tutorial-card" data-difficulty="intermediate" data-category="css" data-popularity="high">
                             <div class="tutorial-header">
                                 <div class="tutorial-meta">
-                                    <span class="difficulty intermediate"><i class="fas fa-chart-line"></i> Intermediate</span>
+                                    <span class="difficulty intermediate"><i class="bi bi-graph-up"></i> Intermediate</span>
                                     <span class="category css">CSS</span>
-                                    <span class="reading-time"><i class="fas fa-clock"></i> 12 min</span>
+                                    <span class="reading-time"><i class="bi bi-clock"></i> 12 min</span>
                                 </div>
                                 <h3>Complete Guide to CSS Colors</h3>
                                 <p class="tutorial-excerpt">Master all CSS color formats: HEX, RGB, HSL, and modern color spaces. Learn best practices and performance considerations.</p>
                             </div>
                             <div class="tutorial-content">
-                                <h4>CSS Color Formats Covered:</h4>
+                                <h4><i class="bi bi-check-circle me-2"></i> CSS Color Formats Covered:</h4>
                                 <ul>
                                     <li>HEX colors (#RRGGBB, #RGB)</li>
                                     <li>RGB and RGBA colors</li>
@@ -355,7 +1583,7 @@ rgb(255, 0, 0) → #FF0000
                                     <li>CSS custom properties with colors</li>
                                 </ul>
                                 <a href="#" class="read-more-btn">
-                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                    <i class="bi bi-book"></i> Read Full Tutorial
                                 </a>
                             </div>
                         </article>
@@ -364,15 +1592,15 @@ rgb(255, 0, 0) → #FF0000
                         <article class="tutorial-card" data-difficulty="intermediate" data-category="accessibility" data-popularity="medium">
                             <div class="tutorial-header">
                                 <div class="tutorial-meta">
-                                    <span class="difficulty intermediate"><i class="fas fa-chart-line"></i> Intermediate</span>
+                                    <span class="difficulty intermediate"><i class="bi bi-graph-up"></i> Intermediate</span>
                                     <span class="category accessibility">Accessibility</span>
-                                    <span class="reading-time"><i class="fas fa-clock"></i> 15 min</span>
+                                    <span class="reading-time"><i class="bi bi-clock"></i> 15 min</span>
                                 </div>
                                 <h3>Color Accessibility: WCAG Guidelines</h3>
                                 <p class="tutorial-excerpt">Learn how to make your website's colors accessible to everyone, including people with visual impairments and color blindness.</p>
                             </div>
                             <div class="tutorial-content">
-                                <h4>WCAG Requirements Covered:</h4>
+                                <h4><i class="bi bi-check-circle me-2"></i> WCAG Requirements Covered:</h4>
                                 <ul>
                                     <li>Contrast ratio requirements (AA, AAA)</li>
                                     <li>Color blindness considerations</li>
@@ -381,7 +1609,7 @@ rgb(255, 0, 0) → #FF0000
                                     <li>Implementing accessible color schemes</li>
                                 </ul>
                                 <a href="#" class="read-more-btn">
-                                    <i class="fas fa-book-reader"></i> Read Full Tutorial
+                                    <i class="bi bi-book"></i> Read Full Tutorial
                                 </a>
                             </div>
                         </article>
@@ -390,15 +1618,15 @@ rgb(255, 0, 0) → #FF0000
                         <article class="tutorial-card" data-difficulty="beginner" data-category="tools" data-popularity="high">
                             <div class="tutorial-header">
                                 <div class="tutorial-meta">
-                                    <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                                    <span class="difficulty beginner"><i class="bi bi-emoji-smile"></i> Beginner</span>
                                     <span class="category tools">Tools</span>
-                                    <span class="reading-time"><i class="fas fa-clock"></i> 6 min</span>
+                                    <span class="reading-time"><i class="bi bi-clock"></i> 6 min</span>
                                 </div>
                                 <h3>How to Use Our RGB to HEX Converter</h3>
                                 <p class="tutorial-excerpt">Step-by-step guide to using the WebMas RGB to HEX converter effectively. Learn all features and tips for maximum productivity.</p>
                             </div>
                             <div class="tutorial-content">
-                                <h4>Tool Features Covered:</h4>
+                                <h4><i class="bi bi-check-circle me-2"></i> Tool Features Covered:</h4>
                                 <ul>
                                     <li>Basic conversion functionality</li>
                                     <li>Using the color preview feature</li>
@@ -407,17 +1635,21 @@ rgb(255, 0, 0) → #FF0000
                                     <li>Mobile usage tips</li>
                                 </ul>
                                 <a href="/" class="primary-btn">
-                                    <i class="fas fa-external-link-alt"></i> Try the Tool Now
+                                    <i class="bi bi-box-arrow-up-right me-2"></i> Try the Tool Now
                                 </a>
                             </div>
                         </article>
                     </div>
-                </section>
+                </article>
+            </div>
+        </section>
 
-                <!-- Learning Path -->
-                <section class="content-card">
-                    <h2><i class="fas fa-road"></i> Recommended Learning Path</h2>
-                    <p class="section-description">Follow this path to systematically learn about colors in web development.</p>
+        <!-- Learning Path -->
+        <section class="content-section">
+            <div class="container">
+                <article class="content-card">
+                    <h2 class="mb-4"><i class="bi bi-signpost me-2"></i> Recommended Learning Path</h2>
+                    <p class="section-description mb-4">Follow this path to systematically learn about colors in web development.</p>
                     
                     <div class="learning-path">
                         <div class="path-step">
@@ -461,17 +1693,21 @@ rgb(255, 0, 0) → #FF0000
                             </div>
                         </div>
                     </div>
-                </section>
+                </article>
+            </div>
+        </section>
 
-                <!-- Resources -->
-                <section class="content-card">
-                    <h2><i class="fas fa-book"></i> Additional Resources</h2>
-                    <p class="section-description">Books, courses, and tools to continue your learning journey.</p>
+        <!-- Resources -->
+        <section class="content-section">
+            <div class="container">
+                <article class="content-card">
+                    <h2 class="mb-4"><i class="bi bi-collection me-2"></i> Additional Resources</h2>
+                    <p class="section-description mb-4">Books, courses, and tools to continue your learning journey.</p>
                     
                     <div class="resources-grid">
                         <div class="resource-card">
                             <div class="resource-icon">
-                                <i class="fas fa-book"></i>
+                                <i class="bi bi-book"></i>
                             </div>
                             <h3>Recommended Books</h3>
                             <ul>
@@ -483,7 +1719,7 @@ rgb(255, 0, 0) → #FF0000
                         
                         <div class="resource-card">
                             <div class="resource-icon">
-                                <i class="fas fa-video"></i>
+                                <i class="bi bi-camera-video"></i>
                             </div>
                             <h3>Online Courses</h3>
                             <ul>
@@ -495,7 +1731,7 @@ rgb(255, 0, 0) → #FF0000
                         
                         <div class="resource-card">
                             <div class="resource-icon">
-                                <i class="fas fa-tools"></i>
+                                <i class="bi bi-tools"></i>
                             </div>
                             <h3>Useful Tools</h3>
                             <ul>
@@ -507,7 +1743,7 @@ rgb(255, 0, 0) → #FF0000
                         
                         <div class="resource-card">
                             <div class="resource-icon">
-                                <i class="fas fa-newspaper"></i>
+                                <i class="bi bi-newspaper"></i>
                             </div>
                             <h3>Blogs & Communities</h3>
                             <ul>
@@ -517,68 +1753,80 @@ rgb(255, 0, 0) → #FF0000
                             </ul>
                         </div>
                     </div>
-                </section>
+                </article>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer" role="contentinfo">
-            <div class="container">
-                <div class="footer-content">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-section">
-                        <div class="footer-logo">
-                            <img src="webmasLogo.png" alt="WebMas Logo" width="40" height="40">
-                            <h3>WebMas Color Tools</h3>
+                        <div class="footer-logo mb-3">
+                            <img src="webmasLogo.png" alt="WebMas Logo" width="40" height="40" class="me-2">
+                            <h3 class="h5 mb-0">WebMas Color Tools</h3>
                         </div>
-                        <p>Providing free, high-quality tools and tutorials for web developers and designers since 2017.</p>
+                        <p class="mb-3">Providing free, high-quality tools and tutorials for web developers and designers since 2017.</p>
                         <div class="tutorial-stats">
-                            <p><i class="fas fa-graduation-cap"></i> <strong>25+ tutorials</strong> and growing</p>
+                            <p><i class="bi bi-book me-2"></i> <strong>25+ tutorials</strong> and growing</p>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-section">
-                        <h4>Tutorial Categories</h4>
-                        <ul>
-                            <li><a href="#basics">Basics</a></li>
-                            <li><a href="#conversion">Conversion</a></li>
-                            <li><a href="#css">CSS Colors</a></li>
-                            <li><a href="#design">Design Theory</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Learning Resources</h4>
-                        <ul>
-                            <li><a href="#learning-path">Learning Path</a></li>
-                            <li><a href="#resources">Additional Resources</a></li>
-                            <li><a href="/tools">Practice with Tools</a></li>
-                            <li><a href="/community">Community Forum</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Get Help</h4>
-                        <ul>
-                            <li><a href="/contact">Ask a Question</a></li>
-                            <li><a href="/suggest-tutorial">Suggest Tutorial</a></li>
-                            <li><a href="/newsletter">Tutorial Updates</a></li>
-                            <li><a href="/contribute">Contribute</a></li>
+                        <h4 class="h5 mb-3">Tutorial Categories</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#basics">Basics</a></li>
+                            <li class="mb-2"><a href="#conversion">Conversion</a></li>
+                            <li class="mb-2"><a href="#css">CSS Colors</a></li>
+                            <li class="mb-2"><a href="#design">Design Theory</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="footer-bottom">
-                    <p class="copyright">
-                        © 2017-<span id="currentYear"></span> WebMas. All rights reserved.
-                    </p>
-                    <p class="educational-note">
-                        <i class="fas fa-heart"></i> Education should be free and accessible to everyone
-                    </p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="h5 mb-3">Learning Resources</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#learning-path">Learning Path</a></li>
+                            <li class="mb-2"><a href="#resources">Additional Resources</a></li>
+                            <li class="mb-2"><a href="/color-tools">Practice with Tools</a></li>
+                            <li class="mb-2"><a href="/contact">Ask Questions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="h5 mb-3">Get Help</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="/contact">Contact Support</a></li>
+                            <li class="mb-2"><a href="/suggest-tutorial">Suggest Tutorial</a></li>
+                            <li class="mb-2"><a href="/newsletter">Tutorial Updates</a></li>
+                            <li class="mb-2"><a href="/contribute">Contribute</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright mb-2">
+                    © 2017-<span id="currentYear">2024</span> WebMas. All rights reserved.
+                </p>
+                <p class="educational-note mb-0">
+                    <i class="bi bi-heart me-1"></i> Education should be free and accessible to everyone
+                </p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript -->
     <script>
         // Set current year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -647,23 +1895,47 @@ rgb(255, 0, 0) → #FF0000
             }
             
             // Add event listeners
-            difficultyFilter.addEventListener('change', filterTutorials);
-            categoryFilter.addEventListener('change', filterTutorials);
-            sortFilter.addEventListener('change', filterTutorials);
+            if (difficultyFilter && categoryFilter && sortFilter) {
+                difficultyFilter.addEventListener('change', filterTutorials);
+                categoryFilter.addEventListener('change', filterTutorials);
+                sortFilter.addEventListener('change', filterTutorials);
+            }
             
             // Add smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#') && href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            let offset = 0;
+                            if (window.innerWidth < 768) {
+                                const fixedHeader = document.querySelector('.fixed-mobile-header.visible');
+                                if (fixedHeader) {
+                                    offset = fixedHeader.offsetHeight;
+                                }
+                            }
+                            
+                            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset - 100;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Close mobile menus if open
+                            const mobileNav = document.getElementById('mobileNav');
+                            const mobileNavFixed = document.getElementById('mobileNavFixed');
+                            
+                            if (mobileNav && mobileNav.classList.contains('show')) {
+                                new bootstrap.Collapse(mobileNav).hide();
+                            }
+                            
+                            if (mobileNavFixed && mobileNavFixed.classList.contains('show')) {
+                                new bootstrap.Collapse(mobileNavFixed).hide();
+                            }
+                        }
                     }
                 });
             });
@@ -673,28 +1945,80 @@ rgb(255, 0, 0) → #FF0000
                 const header = card.querySelector('.tutorial-header');
                 const content = card.querySelector('.tutorial-content');
                 
-                header.addEventListener('click', function() {
-                    const isExpanded = content.style.maxHeight;
-                    
-                    // Close all other tutorials
-                    tutorialCards.forEach(c => {
-                        const cContent = c.querySelector('.tutorial-content');
-                        if (cContent !== content) {
-                            cContent.style.maxHeight = null;
-                            c.classList.remove('expanded');
+                if (header && content) {
+                    header.addEventListener('click', function() {
+                        const isExpanded = content.style.maxHeight;
+                        
+                        // Close all other tutorials
+                        tutorialCards.forEach(c => {
+                            const cContent = c.querySelector('.tutorial-content');
+                            if (cContent !== content) {
+                                cContent.style.maxHeight = null;
+                                c.classList.remove('expanded');
+                            }
+                        });
+                        
+                        // Toggle current
+                        if (isExpanded) {
+                            content.style.maxHeight = null;
+                            card.classList.remove('expanded');
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            card.classList.add('expanded');
                         }
                     });
-                    
-                    // Toggle current
-                    if (isExpanded) {
-                        content.style.maxHeight = null;
-                        card.classList.remove('expanded');
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        card.classList.add('expanded');
-                    }
-                });
+                }
             });
+            
+            // Mobile fixed header functionality
+            let lastScrollTop = 0;
+            const fixedMobileHeader = document.querySelector('.fixed-mobile-header');
+            const mainHeader = document.querySelector('.header');
+            
+            if (fixedMobileHeader && window.innerWidth < 768) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 150) {
+                        fixedMobileHeader.classList.add('visible');
+                        
+                        if (scrollTop > lastScrollTop) {
+                            mainHeader.classList.add('fixed-hidden');
+                        } else {
+                            mainHeader.classList.remove('fixed-hidden');
+                        }
+                    } else {
+                        fixedMobileHeader.classList.remove('visible');
+                        mainHeader.classList.remove('fixed-hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                });
+            }
+            
+            // Sync collapse between mobile and fixed mobile nav
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavFixed = document.getElementById('mobileNavFixed');
+            
+            if (mobileNav && mobileNavFixed) {
+                mobileNav.addEventListener('show.bs.collapse', function() {
+                    new bootstrap.Collapse(mobileNavFixed).hide();
+                });
+                
+                mobileNavFixed.addEventListener('show.bs.collapse', function() {
+                    new bootstrap.Collapse(mobileNav).hide();
+                });
+            }
+        });
+        
+        // Skip to content link
+        document.querySelector('.skip-to-content').addEventListener('click', function(e) {
+            e.preventDefault();
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.focus();
+                mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     </script>
 </body>
